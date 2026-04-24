@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stockle</title>
+<style>
+:root {
+  --bg: #f9f6f0;
+  --card: #ffffff;
+  --border: #e2ddd4;
+  --text: #1a1a1a;
+  --green: #2a7a2a;
+  --green-bg: #eaf4ea;
+  --red: #c0392b;
+  --red-bg: #fdecea;
+  --amber-bg: #fff8e1;
+  --amber: #7a5c00;
+  --muted: #888;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Screens ── */
+.screen { display: none; width: 100%; max-width: 580px; padding: 20px; min-height: 100vh; flex-direction: column; }
+.screen.active { display: flex; }
+
+/* ── Logo ── */
+.logo { font-size: 1.9rem; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+.logo .s { color: #1a1a1a; }
+.logo .le { color: var(--green); }
+
+/* ══════════════════════════════════════════
+   MARKET SELECTION SCREEN
+══════════════════════════════════════════ */
+#screen-market {
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.market-subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.market-cards {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.market-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.18s;
+  min-width: 130px;
+  user-select: none;
+}
+
+.market-card:hover:not(.disabled) {
+  border-color: var(--green);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(42,122,42,0.13);
+}
+
+.market-card:active:not(.disabled) { transform: translateY(-1px); }
+
+.market-card.disabled { opacity: 0.45; cursor: not-allowed; }
+
+.market-card .mc-flag { font-size: 2.2rem; margin-bottom: 8px; }
+.market-card .mc-name { font-weight: 700; font-size: 1rem; }
+.market-card .mc-soon {
+  margin-top: 6px;
+  font-size: 0.65rem;
+  background: #e8e8e8;
+  color: #777;
+  padding: 2px 8px;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+/* ══════════════════════════════════════════
+   GAME SCREEN
+══════════════════════════════════════════ */
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 18px;
+  gap: 8px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.mkt-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--green-bg);
+  color: var(--green);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.countdown {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.btn-sm {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: var(--text);
+  white-space: nowrap;
+  transition: border-color 0.15s;
+}
+.btn-sm:hover { border-color: #aaa; }
+
+/* ── Attempts list ── */
+#attempts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Each attempt card */
+.attempt-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  animation: fadeSlideDown 0.28s ease;
+}
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.attempt-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+/* 2×3 grid: 3 cols, 2 rows */
+.attempt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.cell {
+  border-radius: 7px;
+  padding: 7px 5px 6px;
+  text-align: center;
+}
+
+.cell-lbl {
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  opacity: 0.55;
+  margin-bottom: 3px;
+}
+
+.cell-val {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.cell-arr {
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.cell-ok   { background: var(--green-bg); color: var(--green); }
+.cell-no   { background: var(--red-bg);   color: var(--red); }
+.cell-num  { background: var(--amber-bg); color: var(--amber); }
+
+/* ── Input area ── */
+.input-wrap {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#guess-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  background: var(--card);
+  outline: none;
+  transition: border-color 0.18s;
+}
+#guess-input:focus { border-color: var(--green); }
+#guess-input.error { border-color: var(--red); }
+
+#btn-guess {
+  padding: 0 20px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.18s;
+  min-width: 48px;
+}
+#btn-guess:hover { opacity: 0.85; }
+#btn-guess:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── Autocomplete ── */
+#autocomplete-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 56px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  z-index: 200;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.ac-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #f0ede8;
+}
+.ac-item:last-child { border-bottom: none; }
+.ac-item:hover { background: var(--bg); }
+.ac-ticker { font-weight: 800; color: var(--green); min-width: 52px; }
+.ac-name { color: var(--muted); }
+
+/* ── Status bar ── */
+.game-status {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 6px 0 4px;
+}
+
+/* ── Result banner ── */
+#result-banner {
+  display: none;
+  background: var(--card);
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+#result-banner.lose { border-color: var(--red); }
+#result-banner .rb-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 4px; }
+#result-banner .rb-sub { font-size: 0.85rem; color: var(--muted); }
+
+/* ══════════════════════════════════════════
+   STATS SCREEN
+══════════════════════════════════════════ */
+#screen-stats {
+  gap: 20px;
+  padding-top: 32px;
+}
+
+.stats-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.stat-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 8px;
+  text-align: center;
+}
+.stat-box .sb-num { font-size: 1.8rem; font-weight: 800; color: var(--green); }
+.stat-box .sb-lbl { font-size: 0.68rem; color: var(--muted); margin-top: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ MARKET SELECTOR ═══════════════════════ -->
+<div id="screen-market" class="screen active">
+  <div class="logo"><span class="s">Stock</span><span class="le">le</span></div>
+  <p class="market-subtitle">Indovina la stock del giorno in meno tentativi possibili</p>
+  <div class="market-cards">
+    <div class="market-card" onclick="selectMarket('usa')">
+      <div class="mc-flag">🇺🇸</div>
+      <div class="mc-name">USA</div>
+    </div>
+    <div class="market-card disabled">
+      <div class="mc-flag">🇪🇺</div>
+      <div class="mc-name">Europe</div>
+      <div class="mc-soon">Coming Soon</div>
+    </div>
+    <div class="market-card" onclick="selectMarket('italy')">
+      <div class="mc-flag">🇮🇹</div>
+      <div class="mc-name">Italy</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ GAME ═══════════════════════ -->
+<div id="screen-game" class="screen">
+  <div class="game-header">
+    <div class="logo"><span class="s">Stock</span><span class="le">le</span></div>
+    <div class="header-right">
+      <span class="mkt-badge" id="mkt-badge"></span>
+      <span class="countdown" id="countdown"></span>
+      <button class="btn-sm" onclick="showStats()">Stats</button>
+      <button class="btn-sm" onclick="showScreen('market')">← Mercati</button>
+    </div>
+  </div>
+
+  <div id="result-banner">
+    <div class="rb-title" id="rb-title"></div>
+    <div class="rb-sub"  id="rb-sub"></div>
+  </div>
+
+  <div id="attempts-list"></div>
+
+  <div class="input-wrap" id="input-wrap">
+    <input type="text" id="guess-input" placeholder="Ticker o nome azienda…" autocomplete="off" spellcheck="false">
+    <div id="autocomplete-list"></div>
+    <button id="btn-guess" onclick="submitGuess()">→</button>
+  </div>
+
+  <div class="game-status" id="game-status">Tentativo <span id="att-num">0</span> / 8</div>
+</div>
+
+<!-- ═══════════════════════ STATS ═══════════════════════ -->
+<div id="screen-stats" class="screen">
+  <div class="stats-header">
+    <button class="btn-sm" onclick="showScreen('game')">← Indietro</button>
+    <div class="logo"><span class="s">Stock</span><span class="le">le</span></div>
+  </div>
+  <h2 style="font-size:1.05rem;font-weight:700;">Le tue statistiche</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="sb-num" id="s-played">0</div><div class="sb-lbl">Giocate</div></div>
+    <div class="stat-box"><div class="sb-num" id="s-pct">0%</div><div class="sb-lbl">% Vinte</div></div>
+    <div class="stat-box"><div class="sb-num" id="s-streak">0</div><div class="sb-lbl">Streak</div></div>
+    <div class="stat-box"><div class="sb-num" id="s-best">—</div><div class="sb-lbl">Best</div></div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════
+//  FALLBACK DATA  (replaced by data/*.json in production)
+// ════════════════════════════════════════════════════
+const FALLBACK = {
+  italy: [
+    {ticker:"ENI",   name:"Eni",               market:"FTSE MIB",sector:"Energy",                   ipo:1953,mktCap:42.5, revenue:86.3, ytd: 2.1},
+    {ticker:"ENEL",  name:"Enel",              market:"FTSE MIB",sector:"Utilities",                ipo:1999,mktCap:58.2, revenue:88.1, ytd:-1.4},
+    {ticker:"STLAM", name:"Stellantis",        market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2021,mktCap:32.4, revenue:189.5,ytd:-38.2},
+    {ticker:"ISP",   name:"Intesa Sanpaolo",   market:"FTSE MIB",sector:"Financials",               ipo:1998,mktCap:58.1, revenue:24.2, ytd:22.3},
+    {ticker:"UCG",   name:"UniCredit",         market:"FTSE MIB",sector:"Financials",               ipo:1999,mktCap:52.3, revenue:22.8, ytd:41.5},
+    {ticker:"G",     name:"Generali",          market:"FTSE MIB",sector:"Financials",               ipo:1938,mktCap:40.2, revenue:81.0, ytd:11.2},
+    {ticker:"MB",    name:"Mediobanca",        market:"FTSE MIB",sector:"Financials",               ipo:1956,mktCap:13.1, revenue:3.5,  ytd:18.4},
+    {ticker:"BPER",  name:"BPER Banca",        market:"FTSE MIB",sector:"Financials",               ipo:1990,mktCap:5.2,  revenue:3.1,  ytd:15.6},
+    {ticker:"BAMI",  name:"Banco BPM",         market:"FTSE MIB",sector:"Financials",               ipo:2017,mktCap:10.4, revenue:5.0,  ytd:25.1},
+    {ticker:"FBK",   name:"FinecoBank",        market:"FTSE MIB",sector:"Financials",               ipo:2014,mktCap:9.1,  revenue:1.4,  ytd:-5.2},
+    {ticker:"BMPS",  name:"Monte dei Paschi",  market:"FTSE MIB",sector:"Financials",               ipo:1999,mktCap:9.3,  revenue:2.8,  ytd:87.4},
+    {ticker:"AZM",   name:"Azimut Holding",    market:"FTSE MIB",sector:"Financials",               ipo:2004,mktCap:4.1,  revenue:1.2,  ytd:3.1},
+    {ticker:"BMED",  name:"Banca Mediolanum",  market:"FTSE MIB",sector:"Financials",               ipo:1997,mktCap:7.2,  revenue:2.0,  ytd:12.5},
+    {ticker:"LDO",   name:"Leonardo",          market:"FTSE MIB",sector:"Industrials",              ipo:1948,mktCap:22.3, revenue:15.3, ytd:68.1},
+    {ticker:"FCNF",  name:"Fincantieri",       market:"FTSE MIB",sector:"Industrials",              ipo:2014,mktCap:2.9,  revenue:7.1,  ytd:21.4},
+    {ticker:"STM",   name:"STMicroelectronics",market:"FTSE MIB",sector:"Technology",               ipo:1987,mktCap:24.1, revenue:16.1, ytd:-38.5},
+    {ticker:"TIM",   name:"Telecom Italia",    market:"FTSE MIB",sector:"Communication",            ipo:1994,mktCap:7.2,  revenue:14.1, ytd:12.3},
+    {ticker:"MONC",  name:"Moncler",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2013,mktCap:16.1, revenue:2.9,  ytd:-8.4},
+    {ticker:"RACE",  name:"Ferrari",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2015,mktCap:65.4, revenue:5.9,  ytd:12.7},
+    {ticker:"PIRC",  name:"Pirelli",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:1922,mktCap:4.5,  revenue:6.7,  ytd:-5.1},
+    {ticker:"PRY",   name:"Prysmian",          market:"FTSE MIB",sector:"Industrials",              ipo:2007,mktCap:16.2, revenue:15.4, ytd:14.3},
+    {ticker:"AMPF",  name:"Amplifon",          market:"FTSE MIB",sector:"Healthcare",               ipo:2001,mktCap:6.1,  revenue:2.1,  ytd:-21.3},
+    {ticker:"DIA",   name:"DiaSorin",          market:"FTSE MIB",sector:"Healthcare",               ipo:2007,mktCap:3.5,  revenue:1.3,  ytd:-12.4},
+    {ticker:"REC",   name:"Recordati",         market:"FTSE MIB",sector:"Healthcare",               ipo:1984,mktCap:10.2, revenue:2.1,  ytd:4.1},
+    {ticker:"IP",    name:"Interpump",         market:"FTSE MIB",sector:"Industrials",              ipo:1996,mktCap:4.1,  revenue:2.3,  ytd:-22.1},
+    {ticker:"INW",   name:"INWIT",             market:"FTSE MIB",sector:"Communication",            ipo:2015,mktCap:7.3,  revenue:1.0,  ytd:1.2},
+    {ticker:"IG",    name:"Italgas",           market:"FTSE MIB",sector:"Utilities",                ipo:2016,mktCap:5.1,  revenue:1.6,  ytd:6.3},
+    {ticker:"SRG",   name:"Snam",              market:"FTSE MIB",sector:"Utilities",                ipo:2001,mktCap:13.2, revenue:2.9,  ytd:8.4},
+    {ticker:"TRN",   name:"Terna",             market:"FTSE MIB",sector:"Utilities",                ipo:2004,mktCap:12.1, revenue:3.2,  ytd:4.2},
+    {ticker:"A2A",   name:"A2A",               market:"FTSE MIB",sector:"Utilities",                ipo:2008,mktCap:7.1,  revenue:11.9, ytd:14.5},
+    {ticker:"HER",   name:"Hera",              market:"FTSE MIB",sector:"Utilities",                ipo:2003,mktCap:4.2,  revenue:10.1, ytd:9.8},
+    {ticker:"SPM",   name:"Saipem",            market:"FTSE MIB",sector:"Energy",                   ipo:1969,mktCap:5.2,  revenue:13.7, ytd:12.3},
+    {ticker:"TEN",   name:"Tenaris",           market:"FTSE MIB",sector:"Energy",                   ipo:2001,mktCap:13.1, revenue:12.8, ytd:-7.4},
+    {ticker:"BZU",   name:"Buzzi",             market:"FTSE MIB",sector:"Materials",                ipo:1984,mktCap:8.1,  revenue:4.4,  ytd:5.2},
+    {ticker:"BC",    name:"Brunello Cucinelli", market:"FTSE MIB",sector:"Consumer Discretionary",  ipo:2012,mktCap:9.1,  revenue:1.2,  ytd:2.3},
+    {ticker:"CPR",   name:"Campari",           market:"FTSE MIB",sector:"Consumer Staples",         ipo:2001,mktCap:9.2,  revenue:2.7,  ytd:-22.4},
+    {ticker:"REY",   name:"Reply",             market:"FTSE MIB",sector:"Technology",               ipo:2000,mktCap:5.1,  revenue:1.9,  ytd:-14.2},
+    {ticker:"NEXI",  name:"Nexi",              market:"FTSE MIB",sector:"Technology",               ipo:2019,mktCap:8.2,  revenue:3.8,  ytd:11.5},
+    {ticker:"PST",   name:"Poste Italiane",    market:"FTSE MIB",sector:"Financials",               ipo:2015,mktCap:15.3, revenue:12.4, ytd:10.1},
+    {ticker:"IVG",   name:"Iveco Group",       market:"FTSE MIB",sector:"Industrials",              ipo:2022,mktCap:3.1,  revenue:16.1, ytd:-14.5}
+  ],
+  usa: [
+    {ticker:"AAPL",  name:"Apple",             market:"NASDAQ",  sector:"Technology",               ipo:1980,mktCap:3400, revenue:383.3,ytd:-8.2},
+    {ticker:"MSFT",  name:"Microsoft",         market:"NASDAQ",  sector:"Technology",               ipo:1986,mktCap:3100, revenue:245.1,ytd:7.4},
+    {ticker:"NVDA",  name:"NVIDIA",            market:"NASDAQ",  sector:"Technology",               ipo:1999,mktCap:3200, revenue:130.5,ytd:22.1},
+    {ticker:"GOOGL", name:"Alphabet",          market:"NASDAQ",  sector:"Communication",            ipo:2004,mktCap:2100, revenue:339.6,ytd:4.2},
+    {ticker:"AMZN",  name:"Amazon",            market:"NASDAQ",  sector:"Consumer Discretionary",   ipo:1997,mktCap:2200, revenue:637.9,ytd:4.8},
+    {ticker:"META",  name:"Meta Platforms",    market:"NASDAQ",  sector:"Communication",            ipo:2012,mktCap:1500, revenue:164.5,ytd:14.3},
+    {ticker:"BRK-B", name:"Berkshire Hathaway",market:"NYSE",    sector:"Financials",               ipo:1980,mktCap:1050, revenue:371.4,ytd:16.4},
+    {ticker:"TSLA",  name:"Tesla",             market:"NASDAQ",  sector:"Consumer Discretionary",   ipo:2010,mktCap:850,  revenue:97.7, ytd:-30.1},
+    {ticker:"LLY",   name:"Eli Lilly",         market:"NYSE",    sector:"Healthcare",               ipo:1952,mktCap:720,  revenue:45.0, ytd:-18.4},
+    {ticker:"JPM",   name:"JPMorgan Chase",    market:"NYSE",    sector:"Financials",               ipo:1969,mktCap:680,  revenue:177.0,ytd:15.2},
+    {ticker:"V",     name:"Visa",              market:"NYSE",    sector:"Financials",               ipo:2008,mktCap:590,  revenue:35.9, ytd:4.1},
+    {ticker:"WMT",   name:"Walmart",           market:"NYSE",    sector:"Consumer Staples",         ipo:1972,mktCap:750,  revenue:681.3,ytd:10.4},
+    {ticker:"XOM",   name:"ExxonMobil",        market:"NYSE",    sector:"Energy",                   ipo:1920,mktCap:480,  revenue:398.7,ytd:3.4},
+    {ticker:"UNH",   name:"UnitedHealth",      market:"NYSE",    sector:"Healthcare",               ipo:1991,mktCap:450,  revenue:371.6,ytd:-25.3},
+    {ticker:"MA",    name:"Mastercard",        market:"NYSE",    sector:"Financials",               ipo:2006,mktCap:440,  revenue:25.1, ytd:9.8},
+    {ticker:"COST",  name:"Costco",            market:"NASDAQ",  sector:"Consumer Staples",         ipo:1985,mktCap:410,  revenue:254.0,ytd:6.2},
+    {ticker:"HD",    name:"Home Depot",        market:"NYSE",    sector:"Consumer Discretionary",   ipo:1981,mktCap:380,  revenue:153.7,ytd:2.1},
+    {ticker:"NFLX",  name:"Netflix",           market:"NASDAQ",  sector:"Communication",            ipo:2002,mktCap:380,  revenue:38.9, ytd:21.3},
+    {ticker:"PG",    name:"Procter & Gamble",  market:"NYSE",    sector:"Consumer Staples",         ipo:1890,mktCap:370,  revenue:84.0, ytd:5.3},
+    {ticker:"BAC",   name:"Bank of America",   market:"NYSE",    sector:"Financials",               ipo:1972,mktCap:340,  revenue:98.6, ytd:10.4},
+    {ticker:"ABBV",  name:"AbbVie",            market:"NYSE",    sector:"Healthcare",               ipo:2013,mktCap:310,  revenue:56.3, ytd:8.7},
+    {ticker:"KO",    name:"Coca-Cola",         market:"NYSE",    sector:"Consumer Staples",         ipo:1919,mktCap:290,  revenue:45.8, ytd:10.2},
+    {ticker:"CRM",   name:"Salesforce",        market:"NYSE",    sector:"Technology",               ipo:2004,mktCap:270,  revenue:34.9, ytd:-6.3},
+    {ticker:"CVX",   name:"Chevron",           market:"NYSE",    sector:"Energy",                   ipo:1921,mktCap:265,  revenue:200.0,ytd:3.2},
+    {ticker:"GS",    name:"Goldman Sachs",     market:"NYSE",    sector:"Financials",               ipo:1999,mktCap:190,  revenue:50.0, ytd:22.5},
+    {ticker:"DIS",   name:"Walt Disney",       market:"NYSE",    sector:"Communication",            ipo:1957,mktCap:180,  revenue:91.4, ytd:1.2},
+    {ticker:"RTX",   name:"RTX Corp",          market:"NYSE",    sector:"Industrials",              ipo:1934,mktCap:170,  revenue:80.0, ytd:25.1},
+    {ticker:"AMD",   name:"AMD",               market:"NASDAQ",  sector:"Technology",               ipo:1972,mktCap:220,  revenue:22.7, ytd:-20.4},
+    {ticker:"AMGN",  name:"Amgen",             market:"NASDAQ",  sector:"Healthcare",               ipo:1983,mktCap:140,  revenue:33.4, ytd:4.2},
+    {ticker:"MRK",   name:"Merck",             market:"NYSE",    sector:"Healthcare",               ipo:1946,mktCap:210,  revenue:63.6, ytd:-14.3},
+    {ticker:"CAT",   name:"Caterpillar",       market:"NYSE",    sector:"Industrials",              ipo:1929,mktCap:180,  revenue:64.8, ytd:4.5},
+    {ticker:"PFE",   name:"Pfizer",            market:"NYSE",    sector:"Healthcare",               ipo:1944,mktCap:140,  revenue:58.5, ytd:-10.1},
+    {ticker:"INTC",  name:"Intel",             market:"NASDAQ",  sector:"Technology",               ipo:1971,mktCap:85,   revenue:54.2, ytd:-40.2},
+    {ticker:"UBER",  name:"Uber",              market:"NYSE",    sector:"Consumer Discretionary",   ipo:2019,mktCap:160,  revenue:43.9, ytd:-12.3},
+    {ticker:"PYPL",  name:"PayPal",            market:"NASDAQ",  sector:"Financials",               ipo:2002,mktCap:73,   revenue:31.8, ytd:5.4}
+  ]
+};
+
+// ════════════════════════════════════════════════════
+//  STATE
+// ════════════════════════════════════════════════════
+let currentMarket = null;
+let stocks        = [];
+let target        = null;
+let attempts      = [];   // newest first
+let gameOver      = false;
+const MAX_ATT     = 8;
+
+// ════════════════════════════════════════════════════
+//  INIT / MARKET SELECT
+// ════════════════════════════════════════════════════
+async function selectMarket(market) {
+  currentMarket = market;
+
+  // Try fresh JSON, fall back to embedded data
+  // Supports both array format and {updated_at, stocks:[]} format from pipeline
+  try {
+    const r = await fetch(`data/${market}.json`);
+    if (r.ok) {
+      const d = await r.json();
+      stocks = Array.isArray(d) ? d : (d.stocks || FALLBACK[market]);
+    } else {
+      stocks = FALLBACK[market];
+    }
+  } catch { stocks = FALLBACK[market]; }
+
+  // Deterministic daily stock
+  const today = new Date().toISOString().slice(0, 10);
+  const seed  = [...(today + market)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) | 0, 0);
+  target = stocks[Math.abs(seed) % stocks.length];
+
+  loadState();
+
+  document.getElementById('mkt-badge').textContent =
+    market === 'italy' ? 'FTSE MIB' : 'US Markets';
+
+  showScreen('game');
+  renderAll();
+  startCountdown();
+}
+
+// ════════════════════════════════════════════════════
+//  PERSIST
+// ════════════════════════════════════════════════════
+function stateKey() {
+  return `stockle-${currentMarket}-${new Date().toISOString().slice(0,10)}`;
+}
+
+function saveState() {
+  localStorage.setItem(stateKey(), JSON.stringify({ attempts, gameOver }));
+}
+
+function loadState() {
+  const raw = localStorage.getItem(stateKey());
+  if (raw) { const d = JSON.parse(raw); attempts = d.attempts || []; gameOver = d.gameOver || false; }
+  else { attempts = []; gameOver = false; }
+}
+
+// ════════════════════════════════════════════════════
+//  GAME LOGIC
+// ════════════════════════════════════════════════════
+function submitGuess() {
+  if (gameOver) return;
+  const inp = document.getElementById('guess-input');
+  const q   = inp.value.trim().toUpperCase();
+  const stock = stocks.find(s =>
+    s.ticker.toUpperCase() === q ||
+    s.name.toUpperCase()   === q.toUpperCase()
+  );
+
+  if (!stock) {
+    inp.classList.add('error');
+    setTimeout(() => inp.classList.remove('error'), 800);
+    return;
+  }
+
+  // Prevent duplicate
+  if (attempts.find(a => a.ticker === stock.ticker)) {
+    inp.value = ''; hideAC(); return;
+  }
+
+  attempts.unshift(stock);   // newest at index 0
+  inp.value = '';
+  hideAC();
+
+  const won = stock.ticker === target.ticker;
+  if (won || attempts.length >= MAX_ATT) {
+    gameOver = true;
+    showResult(won);
+    updateStats(won, attempts.length);
+  }
+
+  saveState();
+  renderAll();
+}
+
+// ════════════════════════════════════════════════════
+//  RENDER
+// ════════════════════════════════════════════════════
+function renderAll() {
+  renderAttempts();
+  document.getElementById('att-num').textContent = attempts.length;
+
+  // Show / hide input
+  document.getElementById('input-wrap').style.display = gameOver ? 'none' : 'flex';
+}
+
+function renderAttempts() {
+  const list = document.getElementById('attempts-list');
+  list.innerHTML = '';
+
+  attempts.forEach((g, i) => {
+    const card = document.createElement('div');
+    card.className = 'attempt-card';
+    // Only animate the newest (top) card
+    if (i > 0) card.style.animation = 'none';
+
+    card.innerHTML = `
+      <div class="attempt-label">${g.ticker} &middot; ${g.name}</div>
+      <div class="attempt-grid">
+        ${cell('Market',  g.market,  target.market,  'exact')}
+        ${cell('Mkt Cap', g.mktCap,  target.mktCap,  'num',  'B')}
+        ${cell('Sector',  g.sector,  target.sector,  'exact')}
+        ${cell('IPO',     g.ipo,     target.ipo,     'num',  '')}
+        ${cell('Revenue', g.revenue, target.revenue, 'num',  'B')}
+        ${cell('YTD',     g.ytd,     target.ytd,     'num',  '%')}
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+function cell(label, gv, tv, type, unit = '') {
+  if (type === 'exact') {
+    const ok  = gv === tv;
+    const cls = ok ? 'cell-ok' : 'cell-no';
+    const arr = ok ? '✓' : '✗';
+    return `<div class="cell ${cls}">
+      <div class="cell-lbl">${label}</div>
+      <div class="cell-val">${trunc(gv)}</div>
+      <div class="cell-arr">${arr}</div>
+    </div>`;
+  }
+
+  // numeric
+  const diff = gv - tv;
+  const ok   = diff === 0;
+  const cls  = ok ? 'cell-ok' : 'cell-num';
+  const arr  = ok ? '✓' : (diff < 0 ? '↑' : '↓');
+
+  let display = gv;
+  if (unit === 'B')  display = gv >= 1000 ? `${(gv/1000).toFixed(1)}T` : `${gv}B`;
+  if (unit === '%')  display = `${gv > 0 ? '+' : ''}${gv}%`;
+
+  return `<div class="cell ${cls}">
+    <div class="cell-lbl">${label}</div>
+    <div class="cell-val">${display}</div>
+    <div class="cell-arr">${arr}</div>
+  </div>`;
+}
+
+function trunc(s) {
+  s = String(s);
+  return s.length > 11 ? s.slice(0, 10) + '…' : s;
+}
+
+// ════════════════════════════════════════════════════
+//  RESULT BANNER
+// ════════════════════════════════════════════════════
+function showResult(won) {
+  const b = document.getElementById('result-banner');
+  b.style.display = 'block';
+  b.className = won ? '' : 'lose';
+  document.getElementById('rb-title').textContent =
+    won ? `Perfetto! Trovata in ${attempts.length} ${attempts.length === 1 ? 'tentativo' : 'tentativi'}` : 'Game over';
+  document.getElementById('rb-sub').textContent =
+    `La stock era: ${target.ticker} · ${target.name}`;
+}
+
+// ════════════════════════════════════════════════════
+//  STATS
+// ════════════════════════════════════════════════════
+function statsKey() { return `stockle-stats-${currentMarket}`; }
+
+function updateStats(won, n) {
+  const s = JSON.parse(localStorage.getItem(statsKey()) ||
+    '{"played":0,"won":0,"streak":0,"best":99}');
+  s.played++;
+  if (won) { s.won++; s.streak++; if (n < s.best) s.best = n; }
+  else s.streak = 0;
+  localStorage.setItem(statsKey(), JSON.stringify(s));
+}
+
+function showStats() {
+  const s = JSON.parse(localStorage.getItem(statsKey()) ||
+    '{"played":0,"won":0,"streak":0,"best":99}');
+  document.getElementById('s-played').textContent = s.played;
+  document.getElementById('s-pct').textContent    = s.played ? Math.round(s.won / s.played * 100) + '%' : '0%';
+  document.getElementById('s-streak').textContent = s.streak;
+  document.getElementById('s-best').textContent   = s.best < 99 ? s.best : '—';
+  showScreen('stats');
+}
+
+// ════════════════════════════════════════════════════
+//  AUTOCOMPLETE
+// ════════════════════════════════════════════════════
+document.getElementById('guess-input').addEventListener('input', function () {
+  const q = this.value.trim().toLowerCase();
+  if (q.length < 1) { hideAC(); return; }
+  const matches = stocks.filter(s =>
+    s.ticker.toLowerCase().startsWith(q) ||
+    s.name.toLowerCase().includes(q)
+  ).slice(0, 7);
+  if (!matches.length) { hideAC(); return; }
+  const ul = document.getElementById('autocomplete-list');
+  ul.innerHTML = '';
+  ul.style.display = 'block';
+  matches.forEach(s => {
+    const d = document.createElement('div');
+    d.className = 'ac-item';
+    d.innerHTML = `<span class="ac-ticker">${s.ticker}</span><span class="ac-name">${s.name}</span>`;
+    d.onclick = () => {
+      document.getElementById('guess-input').value = s.ticker;
+      hideAC();
+      submitGuess();
+    };
+    ul.appendChild(d);
+  });
+});
+
+document.getElementById('guess-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') submitGuess();
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.input-wrap')) hideAC();
+});
+
+function hideAC() {
+  document.getElementById('autocomplete-list').style.display = 'none';
+}
+
+// ════════════════════════════════════════════════════
+//  COUNTDOWN
+// ════════════════════════════════════════════════════
+function startCountdown() { tick(); setInterval(tick, 1000); }
+
+function tick() {
+  const now  = new Date();
+  const next = new Date(now); next.setHours(24, 0, 0, 0);
+  const d    = next - now;
+  const h    = String(Math.floor(d / 3600000)).padStart(2, '0');
+  const m    = String(Math.floor((d % 3600000) / 60000)).padStart(2, '0');
+  const s    = String(Math.floor((d % 60000) / 1000)).padStart(2, '0');
+  document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+}
+
+// ════════════════════════════════════════════════════
+//  SCREEN NAVIGATION
+// ════════════════════════════════════════════════════
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(`screen-${id}`).classList.add('active');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+name: Update stock data
+
+on:
+  # ── Scheduled runs ──────────────────────────────────────────────────────────
+  # FTSE MIB closes 17:30 CET → run at 21:30 UTC (safe buffer for both CET/CEST)
+  # NYSE closes  16:00 ET  → run at 23:00 UTC (safe buffer for both EST/EDT)
+  # One combined run at 23:00 UTC covers both markets.
+  schedule:
+    - cron: "0 23 * * 1-5"   # Mon–Fri 23:00 UTC
+
+  # ── Manual trigger (useful for first run / testing) ─────────────────────────
+  workflow_dispatch:
+    inputs:
+      market:
+        description: "Market to update (italy | usa | leave blank for all)"
+        required: false
+        default: ""
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit updated JSON files
+
+    steps:
+      # 1. Checkout repo
+      - uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3. Install dependencies
+      - name: Install Python dependencies
+        run: pip install yfinance --quiet
+
+      # 4. Run the pipeline
+      - name: Fetch data
+        run: |
+          if [ -n "${{ github.event.inputs.market }}" ]; then
+            python scripts/fetch_data.py --market "${{ github.event.inputs.market }}"
+          else
+            python scripts/fetch_data.py
+          fi
+
+      # 5. Commit updated JSON files back to the repo
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/italy.json data/usa.json
+          # Only commit if there are actual changes
+          git diff --cached --quiet || git commit -m "chore: update stock data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push
