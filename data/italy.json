@@ -1,0 +1,405 @@
+{
+  "updated_at": "2026-04-24T23:44:42Z",
+  "stocks": [
+    {
+      "ticker": "ENI",
+      "name": "Eni",
+      "market": "FTSE MIB",
+      "sector": "Energy",
+      "ipo": 1953,
+      "mktCap": 67.5,
+      "revenue": 86.3,
+      "ytd": NaN
+    },
+    {
+      "ticker": "ENEL",
+      "name": "Enel",
+      "market": "FTSE MIB",
+      "sector": "Utilities",
+      "ipo": 1999,
+      "mktCap": 97.5,
+      "revenue": 88.1,
+      "ytd": NaN
+    },
+    {
+      "ticker": "STLAM",
+      "name": "Stellantis",
+      "market": "FTSE MIB",
+      "sector": "Consumer Discretionary",
+      "ipo": 2021,
+      "mktCap": 19.8,
+      "revenue": 189.5,
+      "ytd": NaN
+    },
+    {
+      "ticker": "ISP",
+      "name": "Intesa Sanpaolo",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 1998,
+      "mktCap": 98.4,
+      "revenue": 24.2,
+      "ytd": NaN
+    },
+    {
+      "ticker": "UCG",
+      "name": "UniCredit",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 1999,
+      "mktCap": 95.9,
+      "revenue": 22.8,
+      "ytd": NaN
+    },
+    {
+      "ticker": "G",
+      "name": "Generali",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 1938,
+      "mktCap": 56.7,
+      "revenue": 81.0,
+      "ytd": NaN
+    },
+    {
+      "ticker": "MB",
+      "name": "Mediobanca",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 1956,
+      "mktCap": 15.9,
+      "revenue": 3.5,
+      "ytd": NaN
+    },
+    {
+      "ticker": "BPER",
+      "name": "BPER Banca",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 1990,
+      "mktCap": 5.2,
+      "revenue": 3.1,
+      "ytd": 15.6
+    },
+    {
+      "ticker": "BAMI",
+      "name": "Banco BPM",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 2017,
+      "mktCap": 18.3,
+      "revenue": 5.0,
+      "ytd": NaN
+    },
+    {
+      "ticker": "FBK",
+      "name": "FinecoBank",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 2014,
+      "mktCap": 12.8,
+      "revenue": 1.4,
+      "ytd": NaN
+    },
+    {
+      "ticker": "BMPS",
+      "name": "Monte dei Paschi",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 1999,
+      "mktCap": 27.3,
+      "revenue": 2.8,
+      "ytd": NaN
+    },
+    {
+      "ticker": "AZM",
+      "name": "Azimut Holding",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 2004,
+      "mktCap": 5.2,
+      "revenue": 1.2,
+      "ytd": NaN
+    },
+    {
+      "ticker": "BMED",
+      "name": "Banca Mediolanum",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 1997,
+      "mktCap": 13.6,
+      "revenue": 2.0,
+      "ytd": NaN
+    },
+    {
+      "ticker": "LDO",
+      "name": "Leonardo",
+      "market": "FTSE MIB",
+      "sector": "Industrials",
+      "ipo": 1948,
+      "mktCap": 30.4,
+      "revenue": 15.3,
+      "ytd": NaN
+    },
+    {
+      "ticker": "FCNF",
+      "name": "Fincantieri",
+      "market": "FTSE MIB",
+      "sector": "Industrials",
+      "ipo": 2014,
+      "mktCap": 2.9,
+      "revenue": 7.1,
+      "ytd": 21.4
+    },
+    {
+      "ticker": "STM",
+      "name": "STMicroelectronics",
+      "market": "FTSE MIB",
+      "sector": "Technology",
+      "ipo": 1987,
+      "mktCap": 24.1,
+      "revenue": 16.1,
+      "ytd": -38.5
+    },
+    {
+      "ticker": "TIM",
+      "name": "Telecom Italia",
+      "market": "FTSE MIB",
+      "sector": "Communication",
+      "ipo": 1994,
+      "mktCap": 7.2,
+      "revenue": 14.1,
+      "ytd": 12.3
+    },
+    {
+      "ticker": "MONC",
+      "name": "Moncler",
+      "market": "FTSE MIB",
+      "sector": "Consumer Discretionary",
+      "ipo": 2013,
+      "mktCap": 14.7,
+      "revenue": 2.9,
+      "ytd": NaN
+    },
+    {
+      "ticker": "RACE",
+      "name": "Ferrari",
+      "market": "FTSE MIB",
+      "sector": "Consumer Discretionary",
+      "ipo": 2015,
+      "mktCap": 52.9,
+      "revenue": 5.9,
+      "ytd": NaN
+    },
+    {
+      "ticker": "PIRC",
+      "name": "Pirelli",
+      "market": "FTSE MIB",
+      "sector": "Consumer Discretionary",
+      "ipo": 1922,
+      "mktCap": 6.4,
+      "revenue": 6.7,
+      "ytd": NaN
+    },
+    {
+      "ticker": "PRY",
+      "name": "Prysmian",
+      "market": "FTSE MIB",
+      "sector": "Industrials",
+      "ipo": 2007,
+      "mktCap": 36.5,
+      "revenue": 15.4,
+      "ytd": NaN
+    },
+    {
+      "ticker": "AMPF",
+      "name": "Amplifon",
+      "market": "FTSE MIB",
+      "sector": "Healthcare",
+      "ipo": 2001,
+      "mktCap": 6.1,
+      "revenue": 2.1,
+      "ytd": -21.3
+    },
+    {
+      "ticker": "DIA",
+      "name": "DiaSorin",
+      "market": "FTSE MIB",
+      "sector": "Healthcare",
+      "ipo": 2007,
+      "mktCap": 3.0,
+      "revenue": 1.3,
+      "ytd": NaN
+    },
+    {
+      "ticker": "REC",
+      "name": "Recordati",
+      "market": "FTSE MIB",
+      "sector": "Healthcare",
+      "ipo": 1984,
+      "mktCap": 10.1,
+      "revenue": 2.1,
+      "ytd": NaN
+    },
+    {
+      "ticker": "IP",
+      "name": "Interpump",
+      "market": "FTSE MIB",
+      "sector": "Industrials",
+      "ipo": 1996,
+      "mktCap": 3.8,
+      "revenue": 2.3,
+      "ytd": NaN
+    },
+    {
+      "ticker": "INW",
+      "name": "INWIT",
+      "market": "FTSE MIB",
+      "sector": "Communication",
+      "ipo": 2015,
+      "mktCap": 6.6,
+      "revenue": 1.0,
+      "ytd": NaN
+    },
+    {
+      "ticker": "IG",
+      "name": "Italgas",
+      "market": "FTSE MIB",
+      "sector": "Utilities",
+      "ipo": 2016,
+      "mktCap": 10.5,
+      "revenue": 1.6,
+      "ytd": NaN
+    },
+    {
+      "ticker": "SRG",
+      "name": "Snam",
+      "market": "FTSE MIB",
+      "sector": "Utilities",
+      "ipo": 2001,
+      "mktCap": 22.4,
+      "revenue": 2.9,
+      "ytd": NaN
+    },
+    {
+      "ticker": "TRN",
+      "name": "Terna",
+      "market": "FTSE MIB",
+      "sector": "Utilities",
+      "ipo": 2004,
+      "mktCap": 20.5,
+      "revenue": 3.2,
+      "ytd": NaN
+    },
+    {
+      "ticker": "A2A",
+      "name": "A2A",
+      "market": "FTSE MIB",
+      "sector": "Utilities",
+      "ipo": 2008,
+      "mktCap": 7.5,
+      "revenue": 11.9,
+      "ytd": NaN
+    },
+    {
+      "ticker": "HER",
+      "name": "Hera",
+      "market": "FTSE MIB",
+      "sector": "Utilities",
+      "ipo": 2003,
+      "mktCap": 6.0,
+      "revenue": 10.1,
+      "ytd": NaN
+    },
+    {
+      "ticker": "SPM",
+      "name": "Saipem",
+      "market": "FTSE MIB",
+      "sector": "Energy",
+      "ipo": 1969,
+      "mktCap": 8.4,
+      "revenue": 13.7,
+      "ytd": NaN
+    },
+    {
+      "ticker": "TEN",
+      "name": "Tenaris",
+      "market": "FTSE MIB",
+      "sector": "Energy",
+      "ipo": 2001,
+      "mktCap": 27.0,
+      "revenue": 12.8,
+      "ytd": NaN
+    },
+    {
+      "ticker": "BZU",
+      "name": "Buzzi",
+      "market": "FTSE MIB",
+      "sector": "Materials",
+      "ipo": 1984,
+      "mktCap": 8.4,
+      "revenue": 4.4,
+      "ytd": NaN
+    },
+    {
+      "ticker": "BC",
+      "name": "Brunello Cucinelli",
+      "market": "FTSE MIB",
+      "sector": "Consumer Discretionary",
+      "ipo": 2012,
+      "mktCap": 5.7,
+      "revenue": 1.2,
+      "ytd": NaN
+    },
+    {
+      "ticker": "CPR",
+      "name": "Campari",
+      "market": "FTSE MIB",
+      "sector": "Consumer Staples",
+      "ipo": 2001,
+      "mktCap": 7.5,
+      "revenue": 2.7,
+      "ytd": NaN
+    },
+    {
+      "ticker": "REY",
+      "name": "Reply",
+      "market": "FTSE MIB",
+      "sector": "Technology",
+      "ipo": 2000,
+      "mktCap": 3.4,
+      "revenue": 1.9,
+      "ytd": NaN
+    },
+    {
+      "ticker": "NEXI",
+      "name": "Nexi",
+      "market": "FTSE MIB",
+      "sector": "Technology",
+      "ipo": 2019,
+      "mktCap": 4.5,
+      "revenue": 3.8,
+      "ytd": NaN
+    },
+    {
+      "ticker": "PST",
+      "name": "Poste Italiane",
+      "market": "FTSE MIB",
+      "sector": "Financials",
+      "ipo": 2015,
+      "mktCap": 28.8,
+      "revenue": 12.4,
+      "ytd": NaN
+    },
+    {
+      "ticker": "IVG",
+      "name": "Iveco Group",
+      "market": "FTSE MIB",
+      "sector": "Industrials",
+      "ipo": 2022,
+      "mktCap": 3.7,
+      "revenue": 16.1,
+      "ytd": NaN
+    }
+  ]
+}

@@ -1,0 +1,355 @@
+{
+  "updated_at": "2026-04-24T23:44:54Z",
+  "stocks": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "NASDAQ",
+      "sector": "Technology",
+      "ipo": 1980,
+      "mktCap": 3979.5,
+      "revenue": 383.3,
+      "ytd": 0.1
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "NASDAQ",
+      "sector": "Technology",
+      "ipo": 1986,
+      "mktCap": 3155.9,
+      "revenue": 245.1,
+      "ytd": -10.0
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "NASDAQ",
+      "sector": "Technology",
+      "ipo": 1999,
+      "mktCap": 5062.0,
+      "revenue": 130.5,
+      "ytd": 10.3
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "NASDAQ",
+      "sector": "Communication",
+      "ipo": 2004,
+      "mktCap": 4166.2,
+      "revenue": 339.6,
+      "ytd": 9.4
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "NASDAQ",
+      "sector": "Consumer Discretionary",
+      "ipo": 1997,
+      "mktCap": 2839.0,
+      "revenue": 637.9,
+      "ytd": 16.6
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "market": "NASDAQ",
+      "sector": "Communication",
+      "ipo": 2012,
+      "mktCap": 1713.5,
+      "revenue": 164.5,
+      "ytd": 3.9
+    },
+    {
+      "ticker": "BRK-B",
+      "name": "Berkshire Hathaway",
+      "market": "NYSE",
+      "sector": "Financials",
+      "ipo": 1980,
+      "mktCap": 1012.3,
+      "revenue": 371.4,
+      "ytd": -5.5
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "market": "NASDAQ",
+      "sector": "Consumer Discretionary",
+      "ipo": 2010,
+      "mktCap": 1413.3,
+      "revenue": 97.7,
+      "ytd": -14.1
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "market": "NYSE",
+      "sector": "Healthcare",
+      "ipo": 1952,
+      "mktCap": 789.7,
+      "revenue": 45.0,
+      "ytd": -18.0
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "market": "NYSE",
+      "sector": "Financials",
+      "ipo": 1969,
+      "mktCap": 826.0,
+      "revenue": 177.0,
+      "ytd": -4.4
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "market": "NYSE",
+      "sector": "Financials",
+      "ipo": 2008,
+      "mktCap": 596.6,
+      "revenue": 35.9,
+      "ytd": -10.5
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "market": "NYSE",
+      "sector": "Consumer Staples",
+      "ipo": 1972,
+      "mktCap": 1035.6,
+      "revenue": 681.3,
+      "ytd": 15.5
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "market": "NYSE",
+      "sector": "Energy",
+      "ipo": 1920,
+      "mktCap": 619.0,
+      "revenue": 398.7,
+      "ytd": 22.2
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "market": "NYSE",
+      "sector": "Healthcare",
+      "ipo": 1991,
+      "mktCap": 322.3,
+      "revenue": 371.6,
+      "ytd": 6.3
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "market": "NYSE",
+      "sector": "Financials",
+      "ipo": 2006,
+      "mktCap": 449.9,
+      "revenue": 25.1,
+      "ytd": -10.2
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "market": "NASDAQ",
+      "sector": "Consumer Staples",
+      "ipo": 1985,
+      "mktCap": 448.6,
+      "revenue": 254.0,
+      "ytd": 18.5
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "market": "NYSE",
+      "sector": "Consumer Discretionary",
+      "ipo": 1981,
+      "mktCap": 334.6,
+      "revenue": 153.7,
+      "ytd": -2.2
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "market": "NASDAQ",
+      "sector": "Communication",
+      "ipo": 2002,
+      "mktCap": 389.2,
+      "revenue": 38.9,
+      "ytd": 1.6
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble",
+      "market": "NYSE",
+      "sector": "Consumer Staples",
+      "ipo": 1890,
+      "mktCap": 346.3,
+      "revenue": 84.0,
+      "ytd": 5.2
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "market": "NYSE",
+      "sector": "Financials",
+      "ipo": 1972,
+      "mktCap": 371.1,
+      "revenue": 98.6,
+      "ytd": -6.4
+    },
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "market": "NYSE",
+      "sector": "Healthcare",
+      "ipo": 2013,
+      "mktCap": 351.5,
+      "revenue": 56.3,
+      "ytd": -11.9
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola",
+      "market": "NYSE",
+      "sector": "Consumer Staples",
+      "ipo": 1919,
+      "mktCap": 329.8,
+      "revenue": 45.8,
+      "ytd": 11.6
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "market": "NYSE",
+      "sector": "Technology",
+      "ipo": 2004,
+      "mktCap": 145.7,
+      "revenue": 34.9,
+      "ytd": -29.6
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "market": "NYSE",
+      "sector": "Energy",
+      "ipo": 1921,
+      "mktCap": 368.9,
+      "revenue": 200.0,
+      "ytd": 20.0
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "market": "NYSE",
+      "sector": "Financials",
+      "ipo": 1999,
+      "mktCap": 275.1,
+      "revenue": 50.0,
+      "ytd": 1.9
+    },
+    {
+      "ticker": "DIS",
+      "name": "Walt Disney",
+      "market": "NYSE",
+      "sector": "Communication",
+      "ipo": 1957,
+      "mktCap": 181.8,
+      "revenue": 91.4,
+      "ytd": -8.3
+    },
+    {
+      "ticker": "RTX",
+      "name": "RTX Corp",
+      "market": "NYSE",
+      "sector": "Industrials",
+      "ipo": 1934,
+      "mktCap": 234.7,
+      "revenue": 80.0,
+      "ytd": -6.6
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "NASDAQ",
+      "sector": "Technology",
+      "ipo": 1972,
+      "mktCap": 567.1,
+      "revenue": 22.7,
+      "ytd": 55.6
+    },
+    {
+      "ticker": "AMGN",
+      "name": "Amgen",
+      "market": "NASDAQ",
+      "sector": "Healthcare",
+      "ipo": 1983,
+      "mktCap": 185.7,
+      "revenue": 33.4,
+      "ytd": 5.9
+    },
+    {
+      "ticker": "MRK",
+      "name": "Merck",
+      "market": "NYSE",
+      "sector": "Healthcare",
+      "ipo": 1946,
+      "mktCap": 276.4,
+      "revenue": 63.6,
+      "ytd": 5.9
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "market": "NYSE",
+      "sector": "Industrials",
+      "ipo": 1929,
+      "mktCap": 386.6,
+      "revenue": 64.8,
+      "ytd": 39.4
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "market": "NYSE",
+      "sector": "Healthcare",
+      "ipo": 1944,
+      "mktCap": 153.6,
+      "revenue": 58.5,
+      "ytd": 9.0
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "market": "NASDAQ",
+      "sector": "Technology",
+      "ipo": 1971,
+      "mktCap": 414.8,
+      "revenue": 54.2,
+      "ytd": 109.6
+    },
+    {
+      "ticker": "UBER",
+      "name": "Uber",
+      "market": "NYSE",
+      "sector": "Consumer Discretionary",
+      "ipo": 2019,
+      "mktCap": 153.6,
+      "revenue": 43.9,
+      "ytd": -9.9
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "market": "NASDAQ",
+      "sector": "Financials",
+      "ipo": 2002,
+      "mktCap": 45.4,
+      "revenue": 31.8,
+      "ytd": -12.9
+    }
+  ]
+}
