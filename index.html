@@ -342,7 +342,7 @@ body {
 <!-- ═══════════════════════ MARKET SELECTOR ═══════════════════════ -->
 <div id="screen-market" class="screen active">
   <div class="logo"><span class="s">Stock</span><span class="le">le</span></div>
-  <p class="market-subtitle">Indovina la stock del giorno in meno tentativi possibili</p>
+  <p class="market-subtitle">Guess today's stock in as few attempts as possible</p>
   <div class="market-cards">
     <div class="market-card" onclick="selectMarket('usa')">
       <div class="mc-flag">🇺🇸</div>
@@ -368,9 +368,17 @@ body {
       <span class="mkt-badge" id="mkt-badge"></span>
       <span class="countdown" id="countdown"></span>
       <button class="btn-sm" onclick="showStats()">Stats</button>
-      <button class="btn-sm" onclick="showScreen('market')">← Mercati</button>
+      <button class="btn-sm" onclick="showScreen('market')">← Markets</button>
     </div>
   </div>
+
+  <div class="input-wrap" id="input-wrap">
+    <input type="text" id="guess-input" placeholder="Ticker or company name…" autocomplete="off" spellcheck="false">
+    <div id="autocomplete-list"></div>
+    <button id="btn-guess" onclick="submitGuess()">→</button>
+  </div>
+
+  <div class="game-status" id="game-status">Attempt <span id="att-num">0</span> / 8</div>
 
   <div id="result-banner">
     <div class="rb-title" id="rb-title"></div>
@@ -378,26 +386,18 @@ body {
   </div>
 
   <div id="attempts-list"></div>
-
-  <div class="input-wrap" id="input-wrap">
-    <input type="text" id="guess-input" placeholder="Ticker o nome azienda…" autocomplete="off" spellcheck="false">
-    <div id="autocomplete-list"></div>
-    <button id="btn-guess" onclick="submitGuess()">→</button>
-  </div>
-
-  <div class="game-status" id="game-status">Tentativo <span id="att-num">0</span> / 8</div>
 </div>
 
 <!-- ═══════════════════════ STATS ═══════════════════════ -->
 <div id="screen-stats" class="screen">
   <div class="stats-header">
-    <button class="btn-sm" onclick="showScreen('game')">← Indietro</button>
+    <button class="btn-sm" onclick="showScreen('game')">← Back</button>
     <div class="logo"><span class="s">Stock</span><span class="le">le</span></div>
   </div>
-  <h2 style="font-size:1.05rem;font-weight:700;">Le tue statistiche</h2>
+  <h2 style="font-size:1.05rem;font-weight:700;">Your stats</h2>
   <div class="stats-grid">
-    <div class="stat-box"><div class="sb-num" id="s-played">0</div><div class="sb-lbl">Giocate</div></div>
-    <div class="stat-box"><div class="sb-num" id="s-pct">0%</div><div class="sb-lbl">% Vinte</div></div>
+    <div class="stat-box"><div class="sb-num" id="s-played">0</div><div class="sb-lbl">Played</div></div>
+    <div class="stat-box"><div class="sb-num" id="s-pct">0%</div><div class="sb-lbl">% Won</div></div>
     <div class="stat-box"><div class="sb-num" id="s-streak">0</div><div class="sb-lbl">Streak</div></div>
     <div class="stat-box"><div class="sb-num" id="s-best">—</div><div class="sb-lbl">Best</div></div>
   </div>
@@ -527,6 +527,11 @@ async function selectMarket(market) {
   document.getElementById('mkt-badge').textContent =
     market === 'italy' ? 'FTSE MIB' : 'US Markets';
 
+  // Reset UI state for the new market
+  document.getElementById('result-banner').style.display = 'none';
+  document.getElementById('guess-input').value = '';
+  hideAC();
+
   showScreen('game');
   renderAll();
   startCountdown();
@@ -593,9 +598,13 @@ function submitGuess() {
 function renderAll() {
   renderAttempts();
   document.getElementById('att-num').textContent = attempts.length;
-
-  // Show / hide input
   document.getElementById('input-wrap').style.display = gameOver ? 'none' : 'flex';
+
+  // Re-show result banner if this market's game is already over
+  if (gameOver && attempts.length > 0) {
+    const won = attempts[0].ticker === target.ticker;
+    showResult(won);
+  }
 }
 
 function renderAttempts() {
@@ -664,9 +673,9 @@ function showResult(won) {
   b.style.display = 'block';
   b.className = won ? '' : 'lose';
   document.getElementById('rb-title').textContent =
-    won ? `Perfetto! Trovata in ${attempts.length} ${attempts.length === 1 ? 'tentativo' : 'tentativi'}` : 'Game over';
+    won ? `Got it in ${attempts.length} ${attempts.length === 1 ? 'attempt' : 'attempts'}!` : 'Game over';
   document.getElementById('rb-sub').textContent =
-    `La stock era: ${target.ticker} · ${target.name}`;
+    `The stock was: ${target.ticker} · ${target.name}`;
 }
 
 // ════════════════════════════════════════════════════
