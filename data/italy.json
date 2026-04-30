@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T23:58:58Z",
+  "updated_at": "2026-04-30T23:56:14Z",
   "stocks": [
     {
       "ticker": "ENI",
@@ -7,7 +7,7 @@
       "market": "FTSE MIB",
       "sector": "Energy",
       "ipo": 1953,
-      "mktCap": 69.5,
+      "mktCap": 70.6,
       "revenue": 86.3,
       "ytd": NaN
     },
@@ -17,7 +17,7 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 1999,
-      "mktCap": 95.9,
+      "mktCap": 98.5,
       "revenue": 88.1,
       "ytd": NaN
     },
@@ -27,7 +27,7 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2021,
-      "mktCap": 19.2,
+      "mktCap": 18.0,
       "revenue": 189.5,
       "ytd": NaN
     },
@@ -37,7 +37,7 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1998,
-      "mktCap": 99.5,
+      "mktCap": 100.4,
       "revenue": 24.2,
       "ytd": NaN
     },
@@ -47,7 +47,7 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1999,
-      "mktCap": 98.5,
+      "mktCap": 98.3,
       "revenue": 22.8,
       "ytd": NaN
     },
@@ -57,7 +57,7 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1938,
-      "mktCap": 56.7,
+      "mktCap": 57.0,
       "revenue": 81.0,
       "ytd": NaN
     },
@@ -67,7 +67,7 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1956,
-      "mktCap": 15.9,
+      "mktCap": 16.0,
       "revenue": 3.5,
       "ytd": NaN
     },
@@ -107,7 +107,7 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1999,
-      "mktCap": 27.6,
+      "mktCap": 27.5,
       "revenue": 2.8,
       "ytd": NaN
     },
@@ -137,7 +137,7 @@
       "market": "FTSE MIB",
       "sector": "Industrials",
       "ipo": 1948,
-      "mktCap": 30.1,
+      "mktCap": 30.6,
       "revenue": 15.3,
       "ytd": NaN
     },
@@ -177,7 +177,7 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2013,
-      "mktCap": 14.2,
+      "mktCap": 13.9,
       "revenue": 2.9,
       "ytd": NaN
     },
@@ -187,7 +187,7 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2015,
-      "mktCap": 51.2,
+      "mktCap": 51.7,
       "revenue": 5.9,
       "ytd": NaN
     },
@@ -207,7 +207,7 @@
       "market": "FTSE MIB",
       "sector": "Industrials",
       "ipo": 2007,
-      "mktCap": 35.7,
+      "mktCap": 36.7,
       "revenue": 15.4,
       "ytd": NaN
     },
@@ -237,7 +237,7 @@
       "market": "FTSE MIB",
       "sector": "Healthcare",
       "ipo": 1984,
-      "mktCap": 10.0,
+      "mktCap": 10.1,
       "revenue": 2.1,
       "ytd": NaN
     },
@@ -267,7 +267,7 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2016,
-      "mktCap": 10.3,
+      "mktCap": 10.5,
       "revenue": 1.6,
       "ytd": NaN
     },
@@ -277,7 +277,7 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2001,
-      "mktCap": 22.2,
+      "mktCap": 22.6,
       "revenue": 2.9,
       "ytd": NaN
     },
@@ -287,7 +287,7 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2004,
-      "mktCap": 20.2,
+      "mktCap": 20.6,
       "revenue": 3.2,
       "ytd": NaN
     },
@@ -297,7 +297,7 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2008,
-      "mktCap": 7.3,
+      "mktCap": 7.6,
       "revenue": 11.9,
       "ytd": NaN
     },
@@ -307,7 +307,7 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2003,
-      "mktCap": 5.8,
+      "mktCap": 5.9,
       "revenue": 10.1,
       "ytd": NaN
     },
@@ -317,7 +317,7 @@
       "market": "FTSE MIB",
       "sector": "Energy",
       "ipo": 1969,
-      "mktCap": 8.8,
+      "mktCap": 8.9,
       "revenue": 13.7,
       "ytd": NaN
     },
@@ -327,7 +327,7 @@
       "market": "FTSE MIB",
       "sector": "Energy",
       "ipo": 2001,
-      "mktCap": 27.2,
+      "mktCap": 27.5,
       "revenue": 12.8,
       "ytd": NaN
     },
@@ -347,7 +347,7 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2012,
-      "mktCap": 5.5,
+      "mktCap": 5.6,
       "revenue": 1.2,
       "ytd": NaN
     },
@@ -357,7 +357,7 @@
       "market": "FTSE MIB",
       "sector": "Consumer Staples",
       "ipo": 2001,
-      "mktCap": 7.4,
+      "mktCap": 7.6,
       "revenue": 2.7,
       "ytd": NaN
     },
@@ -387,7 +387,7 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 2015,
-      "mktCap": 29.0,
+      "mktCap": 29.2,
       "revenue": 12.4,
       "ytd": NaN
     },
