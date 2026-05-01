@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-30T23:56:14Z",
+  "updated_at": "2026-05-01T23:56:17Z",
   "stocks": [
     {
       "ticker": "ENI",
@@ -9,7 +9,7 @@
       "ipo": 1953,
       "mktCap": 70.6,
       "revenue": 86.3,
-      "ytd": NaN
+      "ytd": 48.3
     },
     {
       "ticker": "ENEL",
@@ -19,7 +19,7 @@
       "ipo": 1999,
       "mktCap": 98.5,
       "revenue": 88.1,
-      "ytd": NaN
+      "ytd": 13.0
     },
     {
       "ticker": "STLAM",
@@ -29,7 +29,7 @@
       "ipo": 2021,
       "mktCap": 18.0,
       "revenue": 189.5,
-      "ytd": NaN
+      "ytd": -36.1
     },
     {
       "ticker": "ISP",
@@ -39,7 +39,7 @@
       "ipo": 1998,
       "mktCap": 100.4,
       "revenue": 24.2,
-      "ytd": NaN
+      "ytd": -3.0
     },
     {
       "ticker": "UCG",
@@ -49,7 +49,7 @@
       "ipo": 1999,
       "mktCap": 98.3,
       "revenue": 22.8,
-      "ytd": NaN
+      "ytd": -5.4
     },
     {
       "ticker": "G",
@@ -59,7 +59,7 @@
       "ipo": 1938,
       "mktCap": 57.0,
       "revenue": 81.0,
-      "ytd": NaN
+      "ytd": 6.5
     },
     {
       "ticker": "MB",
@@ -69,7 +69,7 @@
       "ipo": 1956,
       "mktCap": 16.0,
       "revenue": 3.5,
-      "ytd": NaN
+      "ytd": 14.0
     },
     {
       "ticker": "BPER",
@@ -89,7 +89,7 @@
       "ipo": 2017,
       "mktCap": 18.6,
       "revenue": 5.0,
-      "ytd": NaN
+      "ytd": -2.2
     },
     {
       "ticker": "FBK",
@@ -99,7 +99,7 @@
       "ipo": 2014,
       "mktCap": 12.9,
       "revenue": 1.4,
-      "ytd": NaN
+      "ytd": -6.3
     },
     {
       "ticker": "BMPS",
@@ -109,7 +109,7 @@
       "ipo": 1999,
       "mktCap": 27.5,
       "revenue": 2.8,
-      "ytd": NaN
+      "ytd": -3.2
     },
     {
       "ticker": "AZM",
@@ -119,7 +119,7 @@
       "ipo": 2004,
       "mktCap": 5.1,
       "revenue": 1.2,
-      "ytd": NaN
+      "ytd": 1.0
     },
     {
       "ticker": "BMED",
@@ -129,7 +129,7 @@
       "ipo": 1997,
       "mktCap": 13.9,
       "revenue": 2.0,
-      "ytd": NaN
+      "ytd": -2.1
     },
     {
       "ticker": "LDO",
@@ -139,7 +139,7 @@
       "ipo": 1948,
       "mktCap": 30.6,
       "revenue": 15.3,
-      "ytd": NaN
+      "ytd": 3.5
     },
     {
       "ticker": "FCNF",
@@ -179,7 +179,7 @@
       "ipo": 2013,
       "mktCap": 13.9,
       "revenue": 2.9,
-      "ytd": NaN
+      "ytd": -6.4
     },
     {
       "ticker": "RACE",
@@ -189,7 +189,7 @@
       "ipo": 2015,
       "mktCap": 51.7,
       "revenue": 5.9,
-      "ytd": NaN
+      "ytd": -6.2
     },
     {
       "ticker": "PIRC",
@@ -199,7 +199,7 @@
       "ipo": 1922,
       "mktCap": 6.3,
       "revenue": 6.7,
-      "ytd": NaN
+      "ytd": -0.5
     },
     {
       "ticker": "PRY",
@@ -209,7 +209,7 @@
       "ipo": 2007,
       "mktCap": 36.7,
       "revenue": 15.4,
-      "ytd": NaN
+      "ytd": 43.4
     },
     {
       "ticker": "AMPF",
@@ -229,7 +229,7 @@
       "ipo": 2007,
       "mktCap": 2.9,
       "revenue": 1.3,
-      "ytd": NaN
+      "ytd": -15.2
     },
     {
       "ticker": "REC",
@@ -239,7 +239,7 @@
       "ipo": 1984,
       "mktCap": 10.1,
       "revenue": 2.1,
-      "ytd": NaN
+      "ytd": 2.8
     },
     {
       "ticker": "IP",
@@ -249,7 +249,7 @@
       "ipo": 1996,
       "mktCap": 3.8,
       "revenue": 2.3,
-      "ytd": NaN
+      "ytd": -22.5
     },
     {
       "ticker": "INW",
@@ -259,7 +259,7 @@
       "ipo": 2015,
       "mktCap": 6.5,
       "revenue": 1.0,
-      "ytd": NaN
+      "ytd": -8.0
     },
     {
       "ticker": "IG",
@@ -269,7 +269,7 @@
       "ipo": 2016,
       "mktCap": 10.5,
       "revenue": 1.6,
-      "ytd": NaN
+      "ytd": 6.4
     },
     {
       "ticker": "SRG",
@@ -279,7 +279,7 @@
       "ipo": 2001,
       "mktCap": 22.6,
       "revenue": 2.9,
-      "ytd": NaN
+      "ytd": 21.6
     },
     {
       "ticker": "TRN",
@@ -289,7 +289,7 @@
       "ipo": 2004,
       "mktCap": 20.6,
       "revenue": 3.2,
-      "ytd": NaN
+      "ytd": 12.9
     },
     {
       "ticker": "A2A",
@@ -299,7 +299,7 @@
       "ipo": 2008,
       "mktCap": 7.6,
       "revenue": 11.9,
-      "ytd": NaN
+      "ytd": 4.8
     },
     {
       "ticker": "HER",
@@ -309,7 +309,7 @@
       "ipo": 2003,
       "mktCap": 5.9,
       "revenue": 10.1,
-      "ytd": NaN
+      "ytd": -0.3
     },
     {
       "ticker": "SPM",
@@ -319,7 +319,7 @@
       "ipo": 1969,
       "mktCap": 8.9,
       "revenue": 13.7,
-      "ytd": NaN
+      "ytd": 84.2
     },
     {
       "ticker": "TEN",
@@ -329,7 +329,7 @@
       "ipo": 2001,
       "mktCap": 27.5,
       "revenue": 12.8,
-      "ytd": NaN
+      "ytd": 65.4
     },
     {
       "ticker": "BZU",
@@ -339,7 +339,7 @@
       "ipo": 1984,
       "mktCap": 8.3,
       "revenue": 4.4,
-      "ytd": NaN
+      "ytd": -9.7
     },
     {
       "ticker": "BC",
@@ -349,7 +349,7 @@
       "ipo": 2012,
       "mktCap": 5.6,
       "revenue": 1.2,
-      "ytd": NaN
+      "ytd": -14.8
     },
     {
       "ticker": "CPR",
@@ -359,7 +359,7 @@
       "ipo": 2001,
       "mktCap": 7.6,
       "revenue": 2.7,
-      "ytd": NaN
+      "ytd": 16.1
     },
     {
       "ticker": "REY",
@@ -369,7 +369,7 @@
       "ipo": 2000,
       "mktCap": 3.5,
       "revenue": 1.9,
-      "ytd": NaN
+      "ytd": -15.0
     },
     {
       "ticker": "NEXI",
@@ -379,7 +379,7 @@
       "ipo": 2019,
       "mktCap": 4.7,
       "revenue": 3.8,
-      "ytd": NaN
+      "ytd": -2.5
     },
     {
       "ticker": "PST",
@@ -389,7 +389,7 @@
       "ipo": 2015,
       "mktCap": 29.2,
       "revenue": 12.4,
-      "ytd": NaN
+      "ytd": 4.5
     },
     {
       "ticker": "IVG",
@@ -399,7 +399,7 @@
       "ipo": 2022,
       "mktCap": 3.7,
       "revenue": 16.1,
-      "ytd": NaN
+      "ytd": 5.3
     }
   ]
 }
