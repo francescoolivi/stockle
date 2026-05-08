@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-07T23:57:29Z",
+  "updated_at": "2026-05-08T23:59:10Z",
   "stocks": [
     {
       "ticker": "AAPL",
@@ -7,9 +7,9 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1980,
-      "mktCap": 4221.7,
+      "mktCap": 4308.1,
       "revenue": 383.3,
-      "ytd": 6.2
+      "ytd": 8.3
     },
     {
       "ticker": "MSFT",
@@ -17,9 +17,9 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1986,
-      "mktCap": 3125.7,
+      "mktCap": 3083.7,
       "revenue": 245.1,
-      "ytd": -10.8
+      "ytd": -12.0
     },
     {
       "ticker": "NVDA",
@@ -27,9 +27,9 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1999,
-      "mktCap": 5140.5,
+      "mktCap": 5230.4,
       "revenue": 130.5,
-      "ytd": 12.0
+      "ytd": 14.0
     },
     {
       "ticker": "GOOGL",
@@ -37,9 +37,9 @@
       "market": "NASDAQ",
       "sector": "Communication",
       "ipo": 2004,
-      "mktCap": 4821.8,
+      "mktCap": 4855.9,
       "revenue": 339.6,
-      "ytd": 26.4
+      "ytd": 27.3
     },
     {
       "ticker": "AMZN",
@@ -47,9 +47,9 @@
       "market": "NASDAQ",
       "sector": "Consumer Discretionary",
       "ipo": 1997,
-      "mktCap": 2917.0,
+      "mktCap": 2933.2,
       "revenue": 637.9,
-      "ytd": 19.7
+      "ytd": 20.4
     },
     {
       "ticker": "META",
@@ -57,9 +57,9 @@
       "market": "NASDAQ",
       "sector": "Communication",
       "ipo": 2012,
-      "mktCap": 1565.7,
+      "mktCap": 1547.5,
       "revenue": 164.5,
-      "ytd": -5.1
+      "ytd": -6.2
     },
     {
       "ticker": "BRK-B",
@@ -67,9 +67,9 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 1980,
-      "mktCap": 1024.7,
+      "mktCap": 1026.5,
       "revenue": 371.4,
-      "ytd": -4.4
+      "ytd": -4.2
     },
     {
       "ticker": "TSLA",
@@ -77,9 +77,9 @@
       "market": "NASDAQ",
       "sector": "Consumer Discretionary",
       "ipo": 2010,
-      "mktCap": 1546.6,
+      "mktCap": 1608.8,
       "revenue": 97.7,
-      "ytd": -6.0
+      "ytd": -2.2
     },
     {
       "ticker": "LLY",
@@ -87,9 +87,9 @@
       "market": "NYSE",
       "sector": "Healthcare",
       "ipo": 1952,
-      "mktCap": 869.4,
+      "mktCap": 845.8,
       "revenue": 45.0,
-      "ytd": -9.6
+      "ytd": -12.1
     },
     {
       "ticker": "JPM",
@@ -97,9 +97,9 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 1969,
-      "mktCap": 820.7,
+      "mktCap": 809.5,
       "revenue": 177.0,
-      "ytd": -5.0
+      "ytd": -6.3
     },
     {
       "ticker": "V",
@@ -107,9 +107,9 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 2008,
-      "mktCap": 611.0,
+      "mktCap": 606.3,
       "revenue": 35.9,
-      "ytd": -7.1
+      "ytd": -7.8
     },
     {
       "ticker": "WMT",
@@ -117,9 +117,9 @@
       "market": "NYSE",
       "sector": "Consumer Staples",
       "ipo": 1972,
-      "mktCap": 1037.8,
+      "mktCap": 1039.7,
       "revenue": 681.3,
-      "ytd": 15.7
+      "ytd": 15.9
     },
     {
       "ticker": "XOM",
@@ -127,9 +127,9 @@
       "market": "NYSE",
       "sector": "Energy",
       "ipo": 1920,
-      "mktCap": 607.6,
+      "mktCap": 599.2,
       "revenue": 398.7,
-      "ytd": 20.3
+      "ytd": 18.7
     },
     {
       "ticker": "UNH",
@@ -137,9 +137,9 @@
       "market": "NYSE",
       "sector": "Healthcare",
       "ipo": 1991,
-      "mktCap": 335.8,
+      "mktCap": 345.1,
       "revenue": 371.6,
-      "ytd": 10.8
+      "ytd": 13.8
     },
     {
       "ticker": "MA",
@@ -147,9 +147,9 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 2006,
-      "mktCap": 442.6,
+      "mktCap": 437.8,
       "revenue": 25.1,
-      "ytd": -10.8
+      "ytd": -11.7
     },
     {
       "ticker": "COST",
@@ -157,9 +157,9 @@
       "market": "NASDAQ",
       "sector": "Consumer Staples",
       "ipo": 1985,
-      "mktCap": 449.0,
+      "mktCap": 447.6,
       "revenue": 254.0,
-      "ytd": 18.8
+      "ytd": 18.4
     },
     {
       "ticker": "HD",
@@ -167,9 +167,9 @@
       "market": "NYSE",
       "sector": "Consumer Discretionary",
       "ipo": 1981,
-      "mktCap": 321.4,
+      "mktCap": 316.2,
       "revenue": 153.7,
-      "ytd": -6.1
+      "ytd": -7.6
     },
     {
       "ticker": "NFLX",
@@ -177,9 +177,9 @@
       "market": "NASDAQ",
       "sector": "Communication",
       "ipo": 2002,
-      "mktCap": 371.6,
+      "mktCap": 368.4,
       "revenue": 38.9,
-      "ytd": -3.0
+      "ytd": -3.8
     },
     {
       "ticker": "PG",
@@ -187,9 +187,9 @@
       "market": "NYSE",
       "sector": "Consumer Staples",
       "ipo": 1890,
-      "mktCap": 340.1,
+      "mktCap": 341.0,
       "revenue": 84.0,
-      "ytd": 4.5
+      "ytd": 4.8
     },
     {
       "ticker": "BAC",
@@ -197,9 +197,9 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 1972,
-      "mktCap": 374.3,
+      "mktCap": 364.1,
       "revenue": 98.6,
-      "ytd": -5.2
+      "ytd": -7.8
     },
     {
       "ticker": "ABBV",
@@ -207,9 +207,9 @@
       "market": "NYSE",
       "sector": "Healthcare",
       "ipo": 2013,
-      "mktCap": 358.5,
+      "mktCap": 356.5,
       "revenue": 56.3,
-      "ytd": -10.1
+      "ytd": -10.7
     },
     {
       "ticker": "KO",
@@ -227,9 +227,9 @@
       "market": "NYSE",
       "sector": "Technology",
       "ipo": 2004,
-      "mktCap": 152.4,
+      "mktCap": 148.7,
       "revenue": 34.9,
-      "ytd": -26.3
+      "ytd": -28.1
     },
     {
       "ticker": "CVX",
@@ -237,9 +237,9 @@
       "market": "NYSE",
       "sector": "Energy",
       "ipo": 1921,
-      "mktCap": 360.8,
+      "mktCap": 359.1,
       "revenue": 200.0,
-      "ytd": 18.2
+      "ytd": 17.6
     },
     {
       "ticker": "GS",
@@ -247,9 +247,9 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 1999,
-      "mktCap": 273.1,
+      "mktCap": 276.3,
       "revenue": 50.0,
-      "ytd": 1.8
+      "ytd": 3.0
     },
     {
       "ticker": "DIS",
@@ -257,9 +257,9 @@
       "market": "NYSE",
       "sector": "Communication",
       "ipo": 1957,
-      "mktCap": 188.7,
+      "mktCap": 187.6,
       "revenue": 91.4,
-      "ytd": -2.9
+      "ytd": -3.4
     },
     {
       "ticker": "RTX",
@@ -267,9 +267,9 @@
       "market": "NYSE",
       "sector": "Industrials",
       "ipo": 1934,
-      "mktCap": 238.1,
+      "mktCap": 237.1,
       "revenue": 80.0,
-      "ytd": -5.3
+      "ytd": -5.6
     },
     {
       "ticker": "AMD",
@@ -277,9 +277,9 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1972,
-      "mktCap": 666.0,
+      "mktCap": 742.2,
       "revenue": 22.7,
-      "ytd": 82.8
+      "ytd": 103.7
     },
     {
       "ticker": "AMGN",
@@ -287,9 +287,9 @@
       "market": "NASDAQ",
       "sector": "Healthcare",
       "ipo": 1983,
-      "mktCap": 177.7,
+      "mktCap": 179.1,
       "revenue": 33.4,
-      "ytd": 1.1
+      "ytd": 1.9
     },
     {
       "ticker": "MRK",
@@ -297,9 +297,9 @@
       "market": "NYSE",
       "sector": "Healthcare",
       "ipo": 1946,
-      "mktCap": 277.4,
+      "mktCap": 275.1,
       "revenue": 63.6,
-      "ytd": 6.3
+      "ytd": 5.4
     },
     {
       "ticker": "CAT",
@@ -307,9 +307,9 @@
       "market": "NYSE",
       "sector": "Industrials",
       "ipo": 1929,
-      "mktCap": 412.5,
+      "mktCap": 413.4,
       "revenue": 64.8,
-      "ytd": 50.3
+      "ytd": 50.6
     },
     {
       "ticker": "PFE",
@@ -317,9 +317,9 @@
       "market": "NYSE",
       "sector": "Healthcare",
       "ipo": 1944,
-      "mktCap": 150.9,
+      "mktCap": 146.4,
       "revenue": 58.5,
-      "ytd": 6.9
+      "ytd": 3.7
     },
     {
       "ticker": "INTC",
@@ -327,9 +327,9 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1971,
-      "mktCap": 551.0,
+      "mktCap": 627.8,
       "revenue": 54.2,
-      "ytd": 178.4
+      "ytd": 217.2
     },
     {
       "ticker": "UBER",
@@ -337,9 +337,9 @@
       "market": "NYSE",
       "sector": "Consumer Discretionary",
       "ipo": 2019,
-      "mktCap": 157.9,
+      "mktCap": 153.6,
       "revenue": 43.9,
-      "ytd": -7.4
+      "ytd": -8.9
     },
     {
       "ticker": "PYPL",
@@ -347,9 +347,9 @@
       "market": "NASDAQ",
       "sector": "Financials",
       "ipo": 2002,
-      "mktCap": 40.8,
+      "mktCap": 40.0,
       "revenue": 31.8,
-      "ytd": -20.3
+      "ytd": -21.7
     }
   ]
 }
