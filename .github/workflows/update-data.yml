@@ -33,7 +33,10 @@ jobs:
 
       # 3. Install dependencies
       - name: Install Python dependencies
-        run: pip install yfinance --quiet
+        run: pip install playwright beautifulsoup4 --quiet
+
+      - name: Install Playwright browser
+        run: playwright install chromium --with-deps
 
       # 4. Run the pipeline
       - name: Fetch data

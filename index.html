@@ -178,12 +178,14 @@ body {
   letter-spacing: 0.2px;
 }
 
-/* 2×3 grid: 3 cols, 2 rows */
+/* 7-cell grid: row 1 → 4 cells (span 3), row 2 → 3 cells (span 4) */
 .attempt-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 6px;
 }
+.cell:nth-child(-n+4) { grid-column: span 3; }
+.cell:nth-child(n+5)  { grid-column: span 4; }
 
 .cell {
   border-radius: 7px;
@@ -409,83 +411,83 @@ body {
 // ════════════════════════════════════════════════════
 const FALLBACK = {
   italy: [
-    {ticker:"ENI",   name:"Eni",               market:"FTSE MIB",sector:"Energy",                   ipo:1953,mktCap:42.5, revenue:86.3, ytd: 2.1},
-    {ticker:"ENEL",  name:"Enel",              market:"FTSE MIB",sector:"Utilities",                ipo:1999,mktCap:58.2, revenue:88.1, ytd:-1.4},
-    {ticker:"STLAM", name:"Stellantis",        market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2021,mktCap:32.4, revenue:189.5,ytd:-38.2},
-    {ticker:"ISP",   name:"Intesa Sanpaolo",   market:"FTSE MIB",sector:"Financials",               ipo:1998,mktCap:58.1, revenue:24.2, ytd:22.3},
-    {ticker:"UCG",   name:"UniCredit",         market:"FTSE MIB",sector:"Financials",               ipo:1999,mktCap:52.3, revenue:22.8, ytd:41.5},
-    {ticker:"G",     name:"Generali",          market:"FTSE MIB",sector:"Financials",               ipo:1938,mktCap:40.2, revenue:81.0, ytd:11.2},
-    {ticker:"MB",    name:"Mediobanca",        market:"FTSE MIB",sector:"Financials",               ipo:1956,mktCap:13.1, revenue:3.5,  ytd:18.4},
-    {ticker:"BPER",  name:"BPER Banca",        market:"FTSE MIB",sector:"Financials",               ipo:1990,mktCap:5.2,  revenue:3.1,  ytd:15.6},
-    {ticker:"BAMI",  name:"Banco BPM",         market:"FTSE MIB",sector:"Financials",               ipo:2017,mktCap:10.4, revenue:5.0,  ytd:25.1},
-    {ticker:"FBK",   name:"FinecoBank",        market:"FTSE MIB",sector:"Financials",               ipo:2014,mktCap:9.1,  revenue:1.4,  ytd:-5.2},
-    {ticker:"BMPS",  name:"Monte dei Paschi",  market:"FTSE MIB",sector:"Financials",               ipo:1999,mktCap:9.3,  revenue:2.8,  ytd:87.4},
-    {ticker:"AZM",   name:"Azimut Holding",    market:"FTSE MIB",sector:"Financials",               ipo:2004,mktCap:4.1,  revenue:1.2,  ytd:3.1},
-    {ticker:"BMED",  name:"Banca Mediolanum",  market:"FTSE MIB",sector:"Financials",               ipo:1997,mktCap:7.2,  revenue:2.0,  ytd:12.5},
-    {ticker:"LDO",   name:"Leonardo",          market:"FTSE MIB",sector:"Industrials",              ipo:1948,mktCap:22.3, revenue:15.3, ytd:68.1},
-    {ticker:"FCNF",  name:"Fincantieri",       market:"FTSE MIB",sector:"Industrials",              ipo:2014,mktCap:2.9,  revenue:7.1,  ytd:21.4},
-    {ticker:"STM",   name:"STMicroelectronics",market:"FTSE MIB",sector:"Technology",               ipo:1987,mktCap:24.1, revenue:16.1, ytd:-38.5},
-    {ticker:"TIM",   name:"Telecom Italia",    market:"FTSE MIB",sector:"Communication",            ipo:1994,mktCap:7.2,  revenue:14.1, ytd:12.3},
-    {ticker:"MONC",  name:"Moncler",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2013,mktCap:16.1, revenue:2.9,  ytd:-8.4},
-    {ticker:"RACE",  name:"Ferrari",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2015,mktCap:65.4, revenue:5.9,  ytd:12.7},
-    {ticker:"PIRC",  name:"Pirelli",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:1922,mktCap:4.5,  revenue:6.7,  ytd:-5.1},
-    {ticker:"PRY",   name:"Prysmian",          market:"FTSE MIB",sector:"Industrials",              ipo:2007,mktCap:16.2, revenue:15.4, ytd:14.3},
-    {ticker:"AMPF",  name:"Amplifon",          market:"FTSE MIB",sector:"Healthcare",               ipo:2001,mktCap:6.1,  revenue:2.1,  ytd:-21.3},
-    {ticker:"DIA",   name:"DiaSorin",          market:"FTSE MIB",sector:"Healthcare",               ipo:2007,mktCap:3.5,  revenue:1.3,  ytd:-12.4},
-    {ticker:"REC",   name:"Recordati",         market:"FTSE MIB",sector:"Healthcare",               ipo:1984,mktCap:10.2, revenue:2.1,  ytd:4.1},
-    {ticker:"IP",    name:"Interpump",         market:"FTSE MIB",sector:"Industrials",              ipo:1996,mktCap:4.1,  revenue:2.3,  ytd:-22.1},
-    {ticker:"INW",   name:"INWIT",             market:"FTSE MIB",sector:"Communication",            ipo:2015,mktCap:7.3,  revenue:1.0,  ytd:1.2},
-    {ticker:"IG",    name:"Italgas",           market:"FTSE MIB",sector:"Utilities",                ipo:2016,mktCap:5.1,  revenue:1.6,  ytd:6.3},
-    {ticker:"SRG",   name:"Snam",              market:"FTSE MIB",sector:"Utilities",                ipo:2001,mktCap:13.2, revenue:2.9,  ytd:8.4},
-    {ticker:"TRN",   name:"Terna",             market:"FTSE MIB",sector:"Utilities",                ipo:2004,mktCap:12.1, revenue:3.2,  ytd:4.2},
-    {ticker:"A2A",   name:"A2A",               market:"FTSE MIB",sector:"Utilities",                ipo:2008,mktCap:7.1,  revenue:11.9, ytd:14.5},
-    {ticker:"HER",   name:"Hera",              market:"FTSE MIB",sector:"Utilities",                ipo:2003,mktCap:4.2,  revenue:10.1, ytd:9.8},
-    {ticker:"SPM",   name:"Saipem",            market:"FTSE MIB",sector:"Energy",                   ipo:1969,mktCap:5.2,  revenue:13.7, ytd:12.3},
-    {ticker:"TEN",   name:"Tenaris",           market:"FTSE MIB",sector:"Energy",                   ipo:2001,mktCap:13.1, revenue:12.8, ytd:-7.4},
-    {ticker:"BZU",   name:"Buzzi",             market:"FTSE MIB",sector:"Materials",                ipo:1984,mktCap:8.1,  revenue:4.4,  ytd:5.2},
-    {ticker:"BC",    name:"Brunello Cucinelli", market:"FTSE MIB",sector:"Consumer Discretionary",  ipo:2012,mktCap:9.1,  revenue:1.2,  ytd:2.3},
-    {ticker:"CPR",   name:"Campari",           market:"FTSE MIB",sector:"Consumer Staples",         ipo:2001,mktCap:9.2,  revenue:2.7,  ytd:-22.4},
-    {ticker:"REY",   name:"Reply",             market:"FTSE MIB",sector:"Technology",               ipo:2000,mktCap:5.1,  revenue:1.9,  ytd:-14.2},
-    {ticker:"NEXI",  name:"Nexi",              market:"FTSE MIB",sector:"Technology",               ipo:2019,mktCap:8.2,  revenue:3.8,  ytd:11.5},
-    {ticker:"PST",   name:"Poste Italiane",    market:"FTSE MIB",sector:"Financials",               ipo:2015,mktCap:15.3, revenue:12.4, ytd:10.1},
-    {ticker:"IVG",   name:"Iveco Group",       market:"FTSE MIB",sector:"Industrials",              ipo:2022,mktCap:3.1,  revenue:16.1, ytd:-14.5}
+    {ticker:"ENI",   name:"Eni",               market:"FTSE MIB",sector:"Energy",                   ipo:1953,mktCap:42.5, revenue:86.3, ytd: 2.1,  price:13.5},
+    {ticker:"ENEL",  name:"Enel",              market:"FTSE MIB",sector:"Utilities",                ipo:1999,mktCap:58.2, revenue:88.1, ytd:-1.4,  price:6.8},
+    {ticker:"STLAM", name:"Stellantis",        market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2021,mktCap:32.4, revenue:189.5,ytd:-38.2, price:9.2},
+    {ticker:"ISP",   name:"Intesa Sanpaolo",   market:"FTSE MIB",sector:"Financials",               ipo:1998,mktCap:58.1, revenue:24.2, ytd:22.3,  price:4.3},
+    {ticker:"UCG",   name:"UniCredit",         market:"FTSE MIB",sector:"Financials",               ipo:1999,mktCap:52.3, revenue:22.8, ytd:41.5,  price:42.8},
+    {ticker:"G",     name:"Generali",          market:"FTSE MIB",sector:"Financials",               ipo:1938,mktCap:40.2, revenue:81.0, ytd:11.2,  price:25.6},
+    {ticker:"MB",    name:"Mediobanca",        market:"FTSE MIB",sector:"Financials",               ipo:1956,mktCap:13.1, revenue:3.5,  ytd:18.4,  price:17.4},
+    {ticker:"BPER",  name:"BPER Banca",        market:"FTSE MIB",sector:"Financials",               ipo:1990,mktCap:5.2,  revenue:3.1,  ytd:15.6,  price:7.2},
+    {ticker:"BAMI",  name:"Banco BPM",         market:"FTSE MIB",sector:"Financials",               ipo:2017,mktCap:10.4, revenue:5.0,  ytd:25.1,  price:9.8},
+    {ticker:"FBK",   name:"FinecoBank",        market:"FTSE MIB",sector:"Financials",               ipo:2014,mktCap:9.1,  revenue:1.4,  ytd:-5.2,  price:13.1},
+    {ticker:"BMPS",  name:"Monte dei Paschi",  market:"FTSE MIB",sector:"Financials",               ipo:1999,mktCap:9.3,  revenue:2.8,  ytd:87.4,  price:9.6},
+    {ticker:"AZM",   name:"Azimut Holding",    market:"FTSE MIB",sector:"Financials",               ipo:2004,mktCap:4.1,  revenue:1.2,  ytd:3.1,   price:26.4},
+    {ticker:"BMED",  name:"Banca Mediolanum",  market:"FTSE MIB",sector:"Financials",               ipo:1997,mktCap:7.2,  revenue:2.0,  ytd:12.5,  price:10.2},
+    {ticker:"LDO",   name:"Leonardo",          market:"FTSE MIB",sector:"Industrials",              ipo:1948,mktCap:22.3, revenue:15.3, ytd:68.1,  price:26.8},
+    {ticker:"FCNF",  name:"Fincantieri",       market:"FTSE MIB",sector:"Industrials",              ipo:2014,mktCap:2.9,  revenue:7.1,  ytd:21.4,  price:6.8},
+    {ticker:"STM",   name:"STMicroelectronics",market:"FTSE MIB",sector:"Technology",               ipo:1987,mktCap:24.1, revenue:16.1, ytd:-38.5, price:21.6},
+    {ticker:"TIM",   name:"Telecom Italia",    market:"FTSE MIB",sector:"Communication",            ipo:1994,mktCap:7.2,  revenue:14.1, ytd:12.3,  price:0.32},
+    {ticker:"MONC",  name:"Moncler",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2013,mktCap:16.1, revenue:2.9,  ytd:-8.4,  price:44.8},
+    {ticker:"RACE",  name:"Ferrari",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:2015,mktCap:65.4, revenue:5.9,  ytd:12.7,  price:418.6},
+    {ticker:"PIRC",  name:"Pirelli",           market:"FTSE MIB",sector:"Consumer Discretionary",   ipo:1922,mktCap:4.5,  revenue:6.7,  ytd:-5.1,  price:4.5},
+    {ticker:"PRY",   name:"Prysmian",          market:"FTSE MIB",sector:"Industrials",              ipo:2007,mktCap:16.2, revenue:15.4, ytd:14.3,  price:42.6},
+    {ticker:"AMPF",  name:"Amplifon",          market:"FTSE MIB",sector:"Healthcare",               ipo:2001,mktCap:6.1,  revenue:2.1,  ytd:-21.3, price:22.8},
+    {ticker:"DIA",   name:"DiaSorin",          market:"FTSE MIB",sector:"Healthcare",               ipo:2007,mktCap:3.5,  revenue:1.3,  ytd:-12.4, price:60.4},
+    {ticker:"REC",   name:"Recordati",         market:"FTSE MIB",sector:"Healthcare",               ipo:1984,mktCap:10.2, revenue:2.1,  ytd:4.1,   price:53.7},
+    {ticker:"IP",    name:"Interpump",         market:"FTSE MIB",sector:"Industrials",              ipo:1996,mktCap:4.1,  revenue:2.3,  ytd:-22.1, price:40.5},
+    {ticker:"INW",   name:"INWIT",             market:"FTSE MIB",sector:"Communication",            ipo:2015,mktCap:7.3,  revenue:1.0,  ytd:1.2,   price:11.8},
+    {ticker:"IG",    name:"Italgas",           market:"FTSE MIB",sector:"Utilities",                ipo:2016,mktCap:5.1,  revenue:1.6,  ytd:6.3,   price:5.85},
+    {ticker:"SRG",   name:"Snam",              market:"FTSE MIB",sector:"Utilities",                ipo:2001,mktCap:13.2, revenue:2.9,  ytd:8.4,   price:5.12},
+    {ticker:"TRN",   name:"Terna",             market:"FTSE MIB",sector:"Utilities",                ipo:2004,mktCap:12.1, revenue:3.2,  ytd:4.2,   price:7.68},
+    {ticker:"A2A",   name:"A2A",               market:"FTSE MIB",sector:"Utilities",                ipo:2008,mktCap:7.1,  revenue:11.9, ytd:14.5,  price:1.95},
+    {ticker:"HER",   name:"Hera",              market:"FTSE MIB",sector:"Utilities",                ipo:2003,mktCap:4.2,  revenue:10.1, ytd:9.8,   price:4.0},
+    {ticker:"SPM",   name:"Saipem",            market:"FTSE MIB",sector:"Energy",                   ipo:1969,mktCap:5.2,  revenue:13.7, ytd:12.3,  price:2.25},
+    {ticker:"TEN",   name:"Tenaris",           market:"FTSE MIB",sector:"Energy",                   ipo:2001,mktCap:13.1, revenue:12.8, ytd:-7.4,  price:13.0},
+    {ticker:"BZU",   name:"Buzzi",             market:"FTSE MIB",sector:"Materials",                ipo:1984,mktCap:8.1,  revenue:4.4,  ytd:5.2,   price:39.8},
+    {ticker:"BC",    name:"Brunello Cucinelli", market:"FTSE MIB",sector:"Consumer Discretionary",  ipo:2012,mktCap:9.1,  revenue:1.2,  ytd:2.3,   price:78.4},
+    {ticker:"CPR",   name:"Campari",           market:"FTSE MIB",sector:"Consumer Staples",         ipo:2001,mktCap:9.2,  revenue:2.7,  ytd:-22.4, price:5.52},
+    {ticker:"REY",   name:"Reply",             market:"FTSE MIB",sector:"Technology",               ipo:2000,mktCap:5.1,  revenue:1.9,  ytd:-14.2, price:145.0},
+    {ticker:"NEXI",  name:"Nexi",              market:"FTSE MIB",sector:"Technology",               ipo:2019,mktCap:8.2,  revenue:3.8,  ytd:11.5,  price:7.04},
+    {ticker:"PST",   name:"Poste Italiane",    market:"FTSE MIB",sector:"Financials",               ipo:2015,mktCap:15.3, revenue:12.4, ytd:10.1,  price:13.5},
+    {ticker:"IVG",   name:"Iveco Group",       market:"FTSE MIB",sector:"Industrials",              ipo:2022,mktCap:3.1,  revenue:16.1, ytd:-14.5, price:12.8}
   ],
   usa: [
-    {ticker:"AAPL",  name:"Apple",             market:"NASDAQ",  sector:"Technology",               ipo:1980,mktCap:3400, revenue:383.3,ytd:-8.2},
-    {ticker:"MSFT",  name:"Microsoft",         market:"NASDAQ",  sector:"Technology",               ipo:1986,mktCap:3100, revenue:245.1,ytd:7.4},
-    {ticker:"NVDA",  name:"NVIDIA",            market:"NASDAQ",  sector:"Technology",               ipo:1999,mktCap:3200, revenue:130.5,ytd:22.1},
-    {ticker:"GOOGL", name:"Alphabet",          market:"NASDAQ",  sector:"Communication",            ipo:2004,mktCap:2100, revenue:339.6,ytd:4.2},
-    {ticker:"AMZN",  name:"Amazon",            market:"NASDAQ",  sector:"Consumer Discretionary",   ipo:1997,mktCap:2200, revenue:637.9,ytd:4.8},
-    {ticker:"META",  name:"Meta Platforms",    market:"NASDAQ",  sector:"Communication",            ipo:2012,mktCap:1500, revenue:164.5,ytd:14.3},
-    {ticker:"BRK-B", name:"Berkshire Hathaway",market:"NYSE",    sector:"Financials",               ipo:1980,mktCap:1050, revenue:371.4,ytd:16.4},
-    {ticker:"TSLA",  name:"Tesla",             market:"NASDAQ",  sector:"Consumer Discretionary",   ipo:2010,mktCap:850,  revenue:97.7, ytd:-30.1},
-    {ticker:"LLY",   name:"Eli Lilly",         market:"NYSE",    sector:"Healthcare",               ipo:1952,mktCap:720,  revenue:45.0, ytd:-18.4},
-    {ticker:"JPM",   name:"JPMorgan Chase",    market:"NYSE",    sector:"Financials",               ipo:1969,mktCap:680,  revenue:177.0,ytd:15.2},
-    {ticker:"V",     name:"Visa",              market:"NYSE",    sector:"Financials",               ipo:2008,mktCap:590,  revenue:35.9, ytd:4.1},
-    {ticker:"WMT",   name:"Walmart",           market:"NYSE",    sector:"Consumer Staples",         ipo:1972,mktCap:750,  revenue:681.3,ytd:10.4},
-    {ticker:"XOM",   name:"ExxonMobil",        market:"NYSE",    sector:"Energy",                   ipo:1920,mktCap:480,  revenue:398.7,ytd:3.4},
-    {ticker:"UNH",   name:"UnitedHealth",      market:"NYSE",    sector:"Healthcare",               ipo:1991,mktCap:450,  revenue:371.6,ytd:-25.3},
-    {ticker:"MA",    name:"Mastercard",        market:"NYSE",    sector:"Financials",               ipo:2006,mktCap:440,  revenue:25.1, ytd:9.8},
-    {ticker:"COST",  name:"Costco",            market:"NASDAQ",  sector:"Consumer Staples",         ipo:1985,mktCap:410,  revenue:254.0,ytd:6.2},
-    {ticker:"HD",    name:"Home Depot",        market:"NYSE",    sector:"Consumer Discretionary",   ipo:1981,mktCap:380,  revenue:153.7,ytd:2.1},
-    {ticker:"NFLX",  name:"Netflix",           market:"NASDAQ",  sector:"Communication",            ipo:2002,mktCap:380,  revenue:38.9, ytd:21.3},
-    {ticker:"PG",    name:"Procter & Gamble",  market:"NYSE",    sector:"Consumer Staples",         ipo:1890,mktCap:370,  revenue:84.0, ytd:5.3},
-    {ticker:"BAC",   name:"Bank of America",   market:"NYSE",    sector:"Financials",               ipo:1972,mktCap:340,  revenue:98.6, ytd:10.4},
-    {ticker:"ABBV",  name:"AbbVie",            market:"NYSE",    sector:"Healthcare",               ipo:2013,mktCap:310,  revenue:56.3, ytd:8.7},
-    {ticker:"KO",    name:"Coca-Cola",         market:"NYSE",    sector:"Consumer Staples",         ipo:1919,mktCap:290,  revenue:45.8, ytd:10.2},
-    {ticker:"CRM",   name:"Salesforce",        market:"NYSE",    sector:"Technology",               ipo:2004,mktCap:270,  revenue:34.9, ytd:-6.3},
-    {ticker:"CVX",   name:"Chevron",           market:"NYSE",    sector:"Energy",                   ipo:1921,mktCap:265,  revenue:200.0,ytd:3.2},
-    {ticker:"GS",    name:"Goldman Sachs",     market:"NYSE",    sector:"Financials",               ipo:1999,mktCap:190,  revenue:50.0, ytd:22.5},
-    {ticker:"DIS",   name:"Walt Disney",       market:"NYSE",    sector:"Communication",            ipo:1957,mktCap:180,  revenue:91.4, ytd:1.2},
-    {ticker:"RTX",   name:"RTX Corp",          market:"NYSE",    sector:"Industrials",              ipo:1934,mktCap:170,  revenue:80.0, ytd:25.1},
-    {ticker:"AMD",   name:"AMD",               market:"NASDAQ",  sector:"Technology",               ipo:1972,mktCap:220,  revenue:22.7, ytd:-20.4},
-    {ticker:"AMGN",  name:"Amgen",             market:"NASDAQ",  sector:"Healthcare",               ipo:1983,mktCap:140,  revenue:33.4, ytd:4.2},
-    {ticker:"MRK",   name:"Merck",             market:"NYSE",    sector:"Healthcare",               ipo:1946,mktCap:210,  revenue:63.6, ytd:-14.3},
-    {ticker:"CAT",   name:"Caterpillar",       market:"NYSE",    sector:"Industrials",              ipo:1929,mktCap:180,  revenue:64.8, ytd:4.5},
-    {ticker:"PFE",   name:"Pfizer",            market:"NYSE",    sector:"Healthcare",               ipo:1944,mktCap:140,  revenue:58.5, ytd:-10.1},
-    {ticker:"INTC",  name:"Intel",             market:"NASDAQ",  sector:"Technology",               ipo:1971,mktCap:85,   revenue:54.2, ytd:-40.2},
-    {ticker:"UBER",  name:"Uber",              market:"NYSE",    sector:"Consumer Discretionary",   ipo:2019,mktCap:160,  revenue:43.9, ytd:-12.3},
-    {ticker:"PYPL",  name:"PayPal",            market:"NASDAQ",  sector:"Financials",               ipo:2002,mktCap:73,   revenue:31.8, ytd:5.4}
+    {ticker:"AAPL",  name:"Apple",             market:"NASDAQ",  sector:"Technology",               ipo:1980,mktCap:3400, revenue:383.3,ytd:-8.2,  price:186.4},
+    {ticker:"MSFT",  name:"Microsoft",         market:"NASDAQ",  sector:"Technology",               ipo:1986,mktCap:3100, revenue:245.1,ytd:7.4,   price:378.9},
+    {ticker:"NVDA",  name:"NVIDIA",            market:"NASDAQ",  sector:"Technology",               ipo:1999,mktCap:3200, revenue:130.5,ytd:22.1,  price:875.4},
+    {ticker:"GOOGL", name:"Alphabet",          market:"NASDAQ",  sector:"Communication",            ipo:2004,mktCap:2100, revenue:339.6,ytd:4.2,   price:172.6},
+    {ticker:"AMZN",  name:"Amazon",            market:"NASDAQ",  sector:"Consumer Discretionary",   ipo:1997,mktCap:2200, revenue:637.9,ytd:4.8,   price:196.9},
+    {ticker:"META",  name:"Meta Platforms",    market:"NASDAQ",  sector:"Communication",            ipo:2012,mktCap:1500, revenue:164.5,ytd:14.3,  price:547.1},
+    {ticker:"BRK-B", name:"Berkshire Hathaway",market:"NYSE",    sector:"Financials",               ipo:1980,mktCap:1050, revenue:371.4,ytd:16.4,  price:468.2},
+    {ticker:"TSLA",  name:"Tesla",             market:"NASDAQ",  sector:"Consumer Discretionary",   ipo:2010,mktCap:850,  revenue:97.7, ytd:-30.1, price:252.1},
+    {ticker:"LLY",   name:"Eli Lilly",         market:"NYSE",    sector:"Healthcare",               ipo:1952,mktCap:720,  revenue:45.0, ytd:-18.4, price:813.6},
+    {ticker:"JPM",   name:"JPMorgan Chase",    market:"NYSE",    sector:"Financials",               ipo:1969,mktCap:680,  revenue:177.0,ytd:15.2,  price:228.3},
+    {ticker:"V",     name:"Visa",              market:"NYSE",    sector:"Financials",               ipo:2008,mktCap:590,  revenue:35.9, ytd:4.1,   price:309.4},
+    {ticker:"WMT",   name:"Walmart",           market:"NYSE",    sector:"Consumer Staples",         ipo:1972,mktCap:750,  revenue:681.3,ytd:10.4,  price:96.2},
+    {ticker:"XOM",   name:"ExxonMobil",        market:"NYSE",    sector:"Energy",                   ipo:1920,mktCap:480,  revenue:398.7,ytd:3.4,   price:114.7},
+    {ticker:"UNH",   name:"UnitedHealth",      market:"NYSE",    sector:"Healthcare",               ipo:1991,mktCap:450,  revenue:371.6,ytd:-25.3, price:490.1},
+    {ticker:"MA",    name:"Mastercard",        market:"NYSE",    sector:"Financials",               ipo:2006,mktCap:440,  revenue:25.1, ytd:9.8,   price:484.2},
+    {ticker:"COST",  name:"Costco",            market:"NASDAQ",  sector:"Consumer Staples",         ipo:1985,mktCap:410,  revenue:254.0,ytd:6.2,   price:915.7},
+    {ticker:"HD",    name:"Home Depot",        market:"NYSE",    sector:"Consumer Discretionary",   ipo:1981,mktCap:380,  revenue:153.7,ytd:2.1,   price:374.0},
+    {ticker:"NFLX",  name:"Netflix",           market:"NASDAQ",  sector:"Communication",            ipo:2002,mktCap:380,  revenue:38.9, ytd:21.3,  price:689.4},
+    {ticker:"PG",    name:"Procter & Gamble",  market:"NYSE",    sector:"Consumer Staples",         ipo:1890,mktCap:370,  revenue:84.0, ytd:5.3,   price:156.7},
+    {ticker:"BAC",   name:"Bank of America",   market:"NYSE",    sector:"Financials",               ipo:1972,mktCap:340,  revenue:98.6, ytd:10.4,  price:44.1},
+    {ticker:"ABBV",  name:"AbbVie",            market:"NYSE",    sector:"Healthcare",               ipo:2013,mktCap:310,  revenue:56.3, ytd:8.7,   price:167.3},
+    {ticker:"KO",    name:"Coca-Cola",         market:"NYSE",    sector:"Consumer Staples",         ipo:1919,mktCap:290,  revenue:45.8, ytd:10.2,  price:64.2},
+    {ticker:"CRM",   name:"Salesforce",        market:"NYSE",    sector:"Technology",               ipo:2004,mktCap:270,  revenue:34.9, ytd:-6.3,  price:277.3},
+    {ticker:"CVX",   name:"Chevron",           market:"NYSE",    sector:"Energy",                   ipo:1921,mktCap:265,  revenue:200.0,ytd:3.2,   price:153.8},
+    {ticker:"GS",    name:"Goldman Sachs",     market:"NYSE",    sector:"Financials",               ipo:1999,mktCap:190,  revenue:50.0, ytd:22.5,  price:503.7},
+    {ticker:"DIS",   name:"Walt Disney",       market:"NYSE",    sector:"Communication",            ipo:1957,mktCap:180,  revenue:91.4, ytd:1.2,   price:95.0},
+    {ticker:"RTX",   name:"RTX Corp",          market:"NYSE",    sector:"Industrials",              ipo:1934,mktCap:170,  revenue:80.0, ytd:25.1,  price:131.7},
+    {ticker:"AMD",   name:"AMD",               market:"NASDAQ",  sector:"Technology",               ipo:1972,mktCap:220,  revenue:22.7, ytd:-20.4, price:131.4},
+    {ticker:"AMGN",  name:"Amgen",             market:"NASDAQ",  sector:"Healthcare",               ipo:1983,mktCap:140,  revenue:33.4, ytd:4.2,   price:281.5},
+    {ticker:"MRK",   name:"Merck",             market:"NYSE",    sector:"Healthcare",               ipo:1946,mktCap:210,  revenue:63.6, ytd:-14.3, price:82.0},
+    {ticker:"CAT",   name:"Caterpillar",       market:"NYSE",    sector:"Industrials",              ipo:1929,mktCap:180,  revenue:64.8, ytd:4.5,   price:345.0},
+    {ticker:"PFE",   name:"Pfizer",            market:"NYSE",    sector:"Healthcare",               ipo:1944,mktCap:140,  revenue:58.5, ytd:-10.1, price:25.2},
+    {ticker:"INTC",  name:"Intel",             market:"NASDAQ",  sector:"Technology",               ipo:1971,mktCap:85,   revenue:54.2, ytd:-40.2, price:21.3},
+    {ticker:"UBER",  name:"Uber",              market:"NYSE",    sector:"Consumer Discretionary",   ipo:2019,mktCap:160,  revenue:43.9, ytd:-12.3, price:72.4},
+    {ticker:"PYPL",  name:"PayPal",            market:"NASDAQ",  sector:"Financials",               ipo:2002,mktCap:73,   revenue:31.8, ytd:5.4,   price:66.5}
   ]
 };
 
@@ -625,6 +627,7 @@ function renderAttempts() {
         ${cell('Sector',  g.sector,  target.sector,  'exact')}
         ${cell('IPO',     g.ipo,     target.ipo,     'num',  '')}
         ${cell('Revenue', g.revenue, target.revenue, 'num',  'B')}
+        ${cell('Price',   g.price,   target.price,   'num',  'price')}
         ${cell('YTD',     g.ytd,     target.ytd,     'num',  '%')}
       </div>`;
     list.appendChild(card);
@@ -650,8 +653,12 @@ function cell(label, gv, tv, type, unit = '') {
   const arr  = ok ? '✓' : (diff < 0 ? '↑' : '↓');
 
   let display = gv;
-  if (unit === 'B')  display = gv >= 1000 ? `${(gv/1000).toFixed(1)}T` : `${gv}B`;
-  if (unit === '%')  display = `${gv > 0 ? '+' : ''}${gv}%`;
+  if (unit === 'B')     display = gv >= 1000 ? `${(gv/1000).toFixed(1)}T` : `${gv}B`;
+  if (unit === '%')     display = `${gv > 0 ? '+' : ''}${gv}%`;
+  if (unit === 'price') {
+    const sym = currentMarket === 'italy' ? '€' : '$';
+    display = sym + (gv >= 100 ? gv.toFixed(1) : gv.toFixed(2));
+  }
 
   return `<div class="cell ${cls}">
     <div class="cell-lbl">${label}</div>
