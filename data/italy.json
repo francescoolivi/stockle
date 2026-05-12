@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T23:59:00Z",
+  "updated_at": "2026-05-12T00:07:49Z",
   "stocks": [
     {
       "ticker": "ENI",
@@ -7,9 +7,11 @@
       "market": "FTSE MIB",
       "sector": "Energy",
       "ipo": 1953,
-      "mktCap": 67.0,
+      "mktCap": 69.0,
       "revenue": 86.3,
-      "ytd": NaN
+      "ytd": 2.1,
+      "price": 23.46,
+      "inv_slug": "eni"
     },
     {
       "ticker": "ENEL",
@@ -17,9 +19,11 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 1999,
-      "mktCap": 95.5,
+      "mktCap": 58.2,
       "revenue": 88.1,
-      "ytd": NaN
+      "ytd": -1.4,
+      "price": 6.8,
+      "inv_slug": "enel"
     },
     {
       "ticker": "STLAM",
@@ -27,9 +31,11 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2021,
-      "mktCap": 18.9,
+      "mktCap": 32.4,
       "revenue": 189.5,
-      "ytd": NaN
+      "ytd": -38.2,
+      "price": 9.2,
+      "inv_slug": "stellantis-nv"
     },
     {
       "ticker": "ISP",
@@ -37,9 +43,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1998,
-      "mktCap": 101.1,
+      "mktCap": 58.1,
       "revenue": 24.2,
-      "ytd": NaN
+      "ytd": 22.3,
+      "price": 4.3,
+      "inv_slug": "intesa-sanpaolo"
     },
     {
       "ticker": "UCG",
@@ -47,9 +55,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1999,
-      "mktCap": 105.6,
+      "mktCap": 52.3,
       "revenue": 22.8,
-      "ytd": NaN
+      "ytd": 41.5,
+      "price": 42.8,
+      "inv_slug": "unicredit"
     },
     {
       "ticker": "G",
@@ -57,9 +67,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1938,
-      "mktCap": 58.2,
+      "mktCap": 40.2,
       "revenue": 81.0,
-      "ytd": NaN
+      "ytd": 11.2,
+      "price": 25.6,
+      "inv_slug": "assicurazioni-generali"
     },
     {
       "ticker": "MB",
@@ -67,9 +79,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1956,
-      "mktCap": 16.4,
+      "mktCap": 13.1,
       "revenue": 3.5,
-      "ytd": NaN
+      "ytd": 18.4,
+      "price": 17.4,
+      "inv_slug": "mediobanca"
     },
     {
       "ticker": "BPER",
@@ -79,7 +93,9 @@
       "ipo": 1990,
       "mktCap": 5.2,
       "revenue": 3.1,
-      "ytd": 15.6
+      "ytd": 15.6,
+      "price": 7.2,
+      "inv_slug": "bper-banca"
     },
     {
       "ticker": "BAMI",
@@ -87,9 +103,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 2017,
-      "mktCap": 19.4,
+      "mktCap": 10.4,
       "revenue": 5.0,
-      "ytd": NaN
+      "ytd": 25.1,
+      "price": 9.8,
+      "inv_slug": "banco-bpm"
     },
     {
       "ticker": "FBK",
@@ -97,9 +115,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 2014,
-      "mktCap": 13.2,
+      "mktCap": 9.1,
       "revenue": 1.4,
-      "ytd": NaN
+      "ytd": -5.2,
+      "price": 13.1,
+      "inv_slug": "finecobank"
     },
     {
       "ticker": "BMPS",
@@ -107,9 +127,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1999,
-      "mktCap": 28.4,
+      "mktCap": 9.3,
       "revenue": 2.8,
-      "ytd": NaN
+      "ytd": 87.4,
+      "price": 9.6,
+      "inv_slug": "banca-monte-dei-paschi-di-siena"
     },
     {
       "ticker": "AZM",
@@ -117,9 +139,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 2004,
-      "mktCap": 5.0,
+      "mktCap": 4.1,
       "revenue": 1.2,
-      "ytd": NaN
+      "ytd": 3.1,
+      "price": 26.4,
+      "inv_slug": "azimut-holding"
     },
     {
       "ticker": "BMED",
@@ -127,9 +151,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 1997,
-      "mktCap": 14.3,
+      "mktCap": 7.2,
       "revenue": 2.0,
-      "ytd": NaN
+      "ytd": 12.5,
+      "price": 10.2,
+      "inv_slug": "banca-mediolanum"
     },
     {
       "ticker": "LDO",
@@ -137,9 +163,11 @@
       "market": "FTSE MIB",
       "sector": "Industrials",
       "ipo": 1948,
-      "mktCap": 30.7,
+      "mktCap": 22.3,
       "revenue": 15.3,
-      "ytd": NaN
+      "ytd": 68.1,
+      "price": 26.8,
+      "inv_slug": "leonardo"
     },
     {
       "ticker": "FCNF",
@@ -149,7 +177,9 @@
       "ipo": 2014,
       "mktCap": 2.9,
       "revenue": 7.1,
-      "ytd": 21.4
+      "ytd": 21.4,
+      "price": 6.8,
+      "inv_slug": "fincantieri"
     },
     {
       "ticker": "STM",
@@ -159,7 +189,9 @@
       "ipo": 1987,
       "mktCap": 24.1,
       "revenue": 16.1,
-      "ytd": -38.5
+      "ytd": -38.5,
+      "price": 21.6,
+      "inv_slug": "stmicroelectronics"
     },
     {
       "ticker": "TIM",
@@ -169,7 +201,9 @@
       "ipo": 1994,
       "mktCap": 7.2,
       "revenue": 14.1,
-      "ytd": 12.3
+      "ytd": 12.3,
+      "price": 0.32,
+      "inv_slug": "telecom-italia"
     },
     {
       "ticker": "MONC",
@@ -177,9 +211,11 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2013,
-      "mktCap": 14.8,
+      "mktCap": 16.1,
       "revenue": 2.9,
-      "ytd": NaN
+      "ytd": -8.4,
+      "price": 44.8,
+      "inv_slug": "moncler"
     },
     {
       "ticker": "RACE",
@@ -187,9 +223,11 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2015,
-      "mktCap": 51.1,
+      "mktCap": 65.4,
       "revenue": 5.9,
-      "ytd": NaN
+      "ytd": 12.7,
+      "price": 418.6,
+      "inv_slug": "ferrari"
     },
     {
       "ticker": "PIRC",
@@ -197,9 +235,11 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 1922,
-      "mktCap": 6.8,
+      "mktCap": 4.5,
       "revenue": 6.7,
-      "ytd": NaN
+      "ytd": -5.1,
+      "price": 4.5,
+      "inv_slug": "pirelli-c"
     },
     {
       "ticker": "PRY",
@@ -207,9 +247,11 @@
       "market": "FTSE MIB",
       "sector": "Industrials",
       "ipo": 2007,
-      "mktCap": 43.6,
+      "mktCap": 16.2,
       "revenue": 15.4,
-      "ytd": NaN
+      "ytd": 14.3,
+      "price": 42.6,
+      "inv_slug": "prysmian"
     },
     {
       "ticker": "AMPF",
@@ -219,7 +261,9 @@
       "ipo": 2001,
       "mktCap": 6.1,
       "revenue": 2.1,
-      "ytd": -21.3
+      "ytd": -21.3,
+      "price": 22.8,
+      "inv_slug": "amplifon"
     },
     {
       "ticker": "DIA",
@@ -227,9 +271,11 @@
       "market": "FTSE MIB",
       "sector": "Healthcare",
       "ipo": 2007,
-      "mktCap": 3.2,
+      "mktCap": 3.5,
       "revenue": 1.3,
-      "ytd": NaN
+      "ytd": -12.4,
+      "price": 60.4,
+      "inv_slug": "diasorin"
     },
     {
       "ticker": "REC",
@@ -239,7 +285,9 @@
       "ipo": 1984,
       "mktCap": 10.2,
       "revenue": 2.1,
-      "ytd": NaN
+      "ytd": 4.1,
+      "price": 53.7,
+      "inv_slug": "recordati"
     },
     {
       "ticker": "IP",
@@ -247,9 +295,11 @@
       "market": "FTSE MIB",
       "sector": "Industrials",
       "ipo": 1996,
-      "mktCap": 3.8,
+      "mktCap": 4.1,
       "revenue": 2.3,
-      "ytd": NaN
+      "ytd": -22.1,
+      "price": 40.5,
+      "inv_slug": "interpump-group"
     },
     {
       "ticker": "INW",
@@ -257,9 +307,11 @@
       "market": "FTSE MIB",
       "sector": "Communication",
       "ipo": 2015,
-      "mktCap": 6.5,
+      "mktCap": 7.3,
       "revenue": 1.0,
-      "ytd": NaN
+      "ytd": 1.2,
+      "price": 11.8,
+      "inv_slug": "inwit"
     },
     {
       "ticker": "IG",
@@ -267,9 +319,11 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2016,
-      "mktCap": 10.5,
+      "mktCap": 5.1,
       "revenue": 1.6,
-      "ytd": NaN
+      "ytd": 6.3,
+      "price": 5.85,
+      "inv_slug": "italgas"
     },
     {
       "ticker": "SRG",
@@ -277,9 +331,11 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2001,
-      "mktCap": 21.7,
+      "mktCap": 13.2,
       "revenue": 2.9,
-      "ytd": NaN
+      "ytd": 8.4,
+      "price": 5.12,
+      "inv_slug": "snam"
     },
     {
       "ticker": "TRN",
@@ -287,9 +343,11 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2004,
-      "mktCap": 20.1,
+      "mktCap": 12.1,
       "revenue": 3.2,
-      "ytd": NaN
+      "ytd": 4.2,
+      "price": 7.68,
+      "inv_slug": "terna"
     },
     {
       "ticker": "A2A",
@@ -297,9 +355,11 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2008,
-      "mktCap": 7.2,
+      "mktCap": 7.1,
       "revenue": 11.9,
-      "ytd": NaN
+      "ytd": 14.5,
+      "price": 1.95,
+      "inv_slug": "a2a"
     },
     {
       "ticker": "HER",
@@ -307,9 +367,11 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 2003,
-      "mktCap": 5.8,
+      "mktCap": 4.2,
       "revenue": 10.1,
-      "ytd": NaN
+      "ytd": 9.8,
+      "price": 4.0,
+      "inv_slug": "hera"
     },
     {
       "ticker": "SPM",
@@ -317,9 +379,11 @@
       "market": "FTSE MIB",
       "sector": "Energy",
       "ipo": 1969,
-      "mktCap": 8.4,
+      "mktCap": 5.2,
       "revenue": 13.7,
-      "ytd": NaN
+      "ytd": 12.3,
+      "price": 2.25,
+      "inv_slug": "saipem"
     },
     {
       "ticker": "TEN",
@@ -327,9 +391,11 @@
       "market": "FTSE MIB",
       "sector": "Energy",
       "ipo": 2001,
-      "mktCap": 25.7,
+      "mktCap": 13.1,
       "revenue": 12.8,
-      "ytd": NaN
+      "ytd": -7.4,
+      "price": 13.0,
+      "inv_slug": "tenaris"
     },
     {
       "ticker": "BZU",
@@ -337,9 +403,11 @@
       "market": "FTSE MIB",
       "sector": "Materials",
       "ipo": 1984,
-      "mktCap": 8.5,
+      "mktCap": 8.1,
       "revenue": 4.4,
-      "ytd": NaN
+      "ytd": 5.2,
+      "price": 39.8,
+      "inv_slug": "buzzi-unicem"
     },
     {
       "ticker": "BC",
@@ -347,9 +415,11 @@
       "market": "FTSE MIB",
       "sector": "Consumer Discretionary",
       "ipo": 2012,
-      "mktCap": 5.8,
+      "mktCap": 9.1,
       "revenue": 1.2,
-      "ytd": NaN
+      "ytd": 2.3,
+      "price": 78.4,
+      "inv_slug": "brunello-cucinelli"
     },
     {
       "ticker": "CPR",
@@ -357,9 +427,11 @@
       "market": "FTSE MIB",
       "sector": "Consumer Staples",
       "ipo": 2001,
-      "mktCap": 6.7,
+      "mktCap": 9.2,
       "revenue": 2.7,
-      "ytd": NaN
+      "ytd": -22.4,
+      "price": 5.52,
+      "inv_slug": "campari"
     },
     {
       "ticker": "REY",
@@ -367,9 +439,11 @@
       "market": "FTSE MIB",
       "sector": "Technology",
       "ipo": 2000,
-      "mktCap": 3.6,
+      "mktCap": 5.1,
       "revenue": 1.9,
-      "ytd": NaN
+      "ytd": -14.2,
+      "price": 145.0,
+      "inv_slug": "reply"
     },
     {
       "ticker": "NEXI",
@@ -377,9 +451,11 @@
       "market": "FTSE MIB",
       "sector": "Technology",
       "ipo": 2019,
-      "mktCap": 4.9,
+      "mktCap": 8.2,
       "revenue": 3.8,
-      "ytd": NaN
+      "ytd": 11.5,
+      "price": 7.04,
+      "inv_slug": "nexi"
     },
     {
       "ticker": "PST",
@@ -387,9 +463,11 @@
       "market": "FTSE MIB",
       "sector": "Financials",
       "ipo": 2015,
-      "mktCap": 30.7,
+      "mktCap": 15.3,
       "revenue": 12.4,
-      "ytd": NaN
+      "ytd": 10.1,
+      "price": 13.5,
+      "inv_slug": "poste-italiane"
     },
     {
       "ticker": "IVG",
@@ -397,9 +475,11 @@
       "market": "FTSE MIB",
       "sector": "Industrials",
       "ipo": 2022,
-      "mktCap": 3.7,
+      "mktCap": 3.1,
       "revenue": 16.1,
-      "ytd": NaN
+      "ytd": -14.5,
+      "price": 12.8,
+      "inv_slug": "iveco-group"
     }
   ]
 }
