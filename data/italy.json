@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T00:10:48Z",
+  "updated_at": "2026-05-15T00:06:03Z",
   "stocks": [
     {
       "ticker": "ENI",
@@ -10,7 +10,7 @@
       "mktCap": 69.3,
       "revenue": 86.3,
       "ytd": 2.1,
-      "price": 23.57,
+      "price": 23.58,
       "inv_slug": "eni"
     },
     {
