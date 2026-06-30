@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T00:22:20Z",
+  "updated_at": "2026-06-30T00:18:44Z",
   "stocks": [
     {
       "ticker": "AAPL",
@@ -7,10 +7,10 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1980,
-      "mktCap": 4190.0,
+      "mktCap": 4140.0,
       "revenue": 383.3,
       "ytd": -8.2,
-      "price": 281.25,
+      "price": 281.74,
       "inv_slug": "apple-computer-inc"
     },
     {
