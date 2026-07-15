@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T00:08:39Z",
+  "updated_at": "2026-07-15T00:05:44Z",
   "stocks": [
     {
       "ticker": "AAPL",
@@ -19,10 +19,10 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1986,
-      "mktCap": 2900.0,
+      "mktCap": 3100,
       "revenue": 245.1,
       "ytd": 7.4,
-      "price": 391.05,
+      "price": 378.9,
       "inv_slug": "microsoft-corp"
     },
     {
@@ -31,10 +31,10 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1999,
-      "mktCap": 4940.0,
+      "mktCap": 3200,
       "revenue": 130.5,
       "ytd": 22.1,
-      "price": 203.53,
+      "price": 875.4,
       "inv_slug": "nvidia-corp"
     },
     {
@@ -55,10 +55,10 @@
       "market": "NASDAQ",
       "sector": "Consumer Discretionary",
       "ipo": 1997,
-      "mktCap": 2650.0,
+      "mktCap": 2200,
       "revenue": 637.9,
       "ytd": 4.8,
-      "price": 247.31,
+      "price": 196.9,
       "inv_slug": "amazon-com-inc"
     },
     {
@@ -79,10 +79,10 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 1980,
-      "mktCap": 1070.0,
+      "mktCap": 1050,
       "revenue": 371.4,
       "ytd": 16.4,
-      "price": 496.85,
+      "price": 468.2,
       "inv_slug": "berkshire-hathaway"
     },
     {
@@ -91,10 +91,10 @@
       "market": "NASDAQ",
       "sector": "Consumer Discretionary",
       "ipo": 2010,
-      "mktCap": 1480.0,
+      "mktCap": 850,
       "revenue": 97.7,
       "ytd": -30.1,
-      "price": 394.87,
+      "price": 252.1,
       "inv_slug": "tesla-motors"
     },
     {
@@ -115,10 +115,10 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 1969,
-      "mktCap": 898.8,
+      "mktCap": 680,
       "revenue": 177.0,
       "ytd": 15.2,
-      "price": 334.59,
+      "price": 228.3,
       "inv_slug": "jp-morgan-chase"
     },
     {
@@ -127,10 +127,10 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 2008,
-      "mktCap": 672.1,
+      "mktCap": 590,
       "revenue": 35.9,
       "ytd": 4.1,
-      "price": 357.75,
+      "price": 309.4,
       "inv_slug": "visa-inc"
     },
     {
@@ -151,10 +151,10 @@
       "market": "NYSE",
       "sector": "Energy",
       "ipo": 1920,
-      "mktCap": 599.2,
+      "mktCap": 480,
       "revenue": 398.7,
       "ytd": 3.4,
-      "price": 144.51,
+      "price": 114.7,
       "inv_slug": "exxon-mobil"
     },
     {
@@ -199,10 +199,10 @@
       "market": "NYSE",
       "sector": "Consumer Discretionary",
       "ipo": 1981,
-      "mktCap": 335.7,
+      "mktCap": 380,
       "revenue": 153.7,
       "ytd": 2.1,
-      "price": 337.11,
+      "price": 374.0,
       "inv_slug": "home-depot"
     },
     {
@@ -223,10 +223,10 @@
       "market": "NYSE",
       "sector": "Consumer Staples",
       "ipo": 1890,
-      "mktCap": 345.2,
+      "mktCap": 370,
       "revenue": 84.0,
       "ytd": 5.3,
-      "price": 148.37,
+      "price": 156.7,
       "inv_slug": "procter-gamble"
     },
     {
@@ -235,10 +235,10 @@
       "market": "NYSE",
       "sector": "Financials",
       "ipo": 1972,
-      "mktCap": 422.0,
+      "mktCap": 340,
       "revenue": 98.6,
       "ytd": 10.4,
-      "price": 59.54,
+      "price": 44.1,
       "inv_slug": "bank-of-america"
     },
     {
@@ -271,10 +271,10 @@
       "market": "NYSE",
       "sector": "Technology",
       "ipo": 2004,
-      "mktCap": 139.6,
+      "mktCap": 270,
       "revenue": 34.9,
       "ytd": -6.3,
-      "price": 171.16,
+      "price": 277.3,
       "inv_slug": "salesforce-com"
     },
     {
@@ -283,10 +283,10 @@
       "market": "NYSE",
       "sector": "Energy",
       "ipo": 1921,
-      "mktCap": 360.1,
+      "mktCap": 265,
       "revenue": 200.0,
       "ytd": 3.2,
-      "price": 182.21,
+      "price": 153.8,
       "inv_slug": "chevron"
     },
     {
@@ -355,10 +355,10 @@
       "market": "NYSE",
       "sector": "Healthcare",
       "ipo": 1946,
-      "mktCap": 113.9,
+      "mktCap": 210,
       "revenue": 63.6,
       "ytd": -14.3,
-      "price": 6867.0,
+      "price": 82.0,
       "inv_slug": "merck"
     },
     {
@@ -367,10 +367,10 @@
       "market": "NYSE",
       "sector": "Industrials",
       "ipo": 1929,
-      "mktCap": 430.5,
+      "mktCap": 180,
       "revenue": 64.8,
       "ytd": 4.5,
-      "price": 931.47,
+      "price": 345.0,
       "inv_slug": "caterpillar"
     },
     {
@@ -379,10 +379,10 @@
       "market": "NYSE",
       "sector": "Healthcare",
       "ipo": 1944,
-      "mktCap": 139.8,
+      "mktCap": 140,
       "revenue": 58.5,
       "ytd": -10.1,
-      "price": 24.48,
+      "price": 25.2,
       "inv_slug": "pfizer"
     },
     {
@@ -391,10 +391,10 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1971,
-      "mktCap": 519.0,
+      "mktCap": 85,
       "revenue": 54.2,
       "ytd": -40.2,
-      "price": 103.09,
+      "price": 21.3,
       "inv_slug": "intel-corp"
     },
     {
@@ -403,10 +403,10 @@
       "market": "NYSE",
       "sector": "Consumer Discretionary",
       "ipo": 2019,
-      "mktCap": 773.7,
+      "mktCap": 160,
       "revenue": 43.9,
       "ytd": -12.3,
-      "price": 95.11,
+      "price": 72.4,
       "inv_slug": "uber-technologies"
     },
     {
