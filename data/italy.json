@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T01:25:29Z",
+  "updated_at": "2026-09-24T01:20:06Z",
   "stocks": [
     {
       "ticker": "ENI",
@@ -19,10 +19,10 @@
       "market": "FTSE MIB",
       "sector": "Utilities",
       "ipo": 1999,
-      "mktCap": 88.5,
+      "mktCap": 87.6,
       "revenue": 88.1,
       "ytd": -1.4,
-      "price": 8.92,
+      "price": 8.83,
       "inv_slug": "enel"
     },
     {
