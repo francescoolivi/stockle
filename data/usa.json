@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T01:57:44Z",
+  "updated_at": "2026-10-06T02:56:25Z",
   "stocks": [
     {
       "ticker": "AAPL",
@@ -19,10 +19,10 @@
       "market": "NASDAQ",
       "sector": "Technology",
       "ipo": 1986,
-      "mktCap": 3810.0,
+      "mktCap": 3900.0,
       "revenue": 245.1,
       "ytd": 7.4,
-      "price": 517.53,
+      "price": 525.18,
       "inv_slug": "microsoft-corp"
     },
     {
